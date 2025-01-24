@@ -19,11 +19,11 @@ return {
 
         -- Navigation keymaps
         vim.keymap.set('n', '<C-n>', function()
-            require('illuminate').goto_next_reference(false)
+            require('illuminate').goto_next_reference()
         end, { desc = 'go to next occurrence' })
 
         vim.keymap.set('n', '<C-p>', function()
-            require('illuminate').goto_prev_reference(false)
+            require('illuminate').goto_prev_reference()
         end, { desc = 'go to prev occurrence' })
 
     end
