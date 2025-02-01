@@ -18,13 +18,13 @@ return {
         -- vim.api.nvim_set_hl(0, 'IlluminatedWordWrite', { bg = '#665c54', underline = true }) -- Warm brown
 
         -- Navigation keymaps
-        vim.keymap.set('n', '<C-n>', function()
-            require('illuminate').goto_next_reference()
-        end, { desc = 'go to next occurrence' })
-
-        vim.keymap.set('n', '<C-p>', function()
-            require('illuminate').goto_prev_reference()
-        end, { desc = 'go to prev occurrence' })
-
+        -- vim.keymap.set('n', '<C-n>', function()
+        --     require('illuminate').goto_next_reference()
+        -- end, { desc = 'go to next occurrence' })
+        --
+        -- vim.keymap.set('n', '<C-p>', function()
+        --     require('illuminate').goto_prev_reference()
+        -- end, { desc = 'go to prev occurrence' })
+        --
     end
 }
