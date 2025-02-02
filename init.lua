@@ -161,26 +161,26 @@ vim.opt.scrolloff = 10
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+-- vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+-- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- [mine] Swap colon functionality with semicolon
-vim.keymap.set('n', ';', ':', { noremap = true })
-vim.keymap.set('n', ':', ';', { noremap = true })
+-- vim.keymap.set('n', ';', ':', { noremap = true })
+-- vim.keymap.set('n', ':', ';', { noremap = true })
 
--- [mine] Shortcut for quickref <leader>hq
-vim.keymap.set('n', '<leader>hq', ':help quickref<CR>', { desc = 'Help: Quick Reference' })
-
--- [mine] Open config file <leader>ev
-vim.keymap.set('n', '<leader>ev', ':edit $MYVIMRC<CR>', { desc = 'Edit config file' })
-
--- [mine] Reload config <leader>sv
-vim.keymap.set('n', '<leader>sv', ':source $MYVIMRC<CR>', { desc = 'Source config file' })
+-- -- [mine] Shortcut for quickref <leader>hq
+-- vim.keymap.set('n', '<leader>hq', ':help quickref<CR>', { desc = 'Help: Quick Reference' })
+--
+-- -- [mine] Open config file <leader>ev
+-- vim.keymap.set('n', '<leader>ev', ':edit $MYVIMRC<CR>', { desc = 'Edit config file' })
+--
+-- -- [mine] Reload config <leader>sv
+-- vim.keymap.set('n', '<leader>sv', ':source $MYVIMRC<CR>', { desc = 'Source config file' })
 
 -- [mine] Quick save <leader>w
-vim.keymap.set('n', '<leader>w', ':write<CR>', { desc = 'Save file' })
+-- vim.keymap.set('n', '<leader>w', ':write<CR>', { desc = 'Save file' })
 
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
@@ -200,11 +200,11 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+-- --  See `:help wincmd` for a list of all window commands
+-- vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+-- vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+-- vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+-- vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -989,6 +989,8 @@ require('lazy').setup({
     },
   },
 })
+
+require 'custom.keymap'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
