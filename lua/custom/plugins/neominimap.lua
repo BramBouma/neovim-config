@@ -40,4 +40,7 @@ return {
             auto_enable = true,
         }
     end,
+    require('which-key').add({
+        { "<leader>n", group = "[N]eo-minimap" },
+    }),
 }

@@ -30,6 +30,9 @@ vim.keymap.set('n', ';', ':', { noremap = true })
 vim.keymap.set('n', ':', ';', { noremap = true })
 -- map to get to neotree current view
 vim.keymap.set("n", "<leader>nt", "<cmd>Neotree position=current<CR>", { desc = "open neomap in netrw view"})
+-- map to get to Lazy / Mason menus
+vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "[L]azy"})
+vim.keymap.set("n", "<leader>lm", "<cmd>Mason<CR>", { desc = "[M]ason"})
 
 
 -- FROM THEPRIMEAGEN (https://www.youtube.com/watch?v=w7i4amO_zaE)
