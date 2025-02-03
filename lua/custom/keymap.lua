@@ -23,8 +23,8 @@ vim.keymap.set('n', '<leader>sv', ':source $MYVIMRC<CR>', { desc = 'Source confi
 
 
 -- MY KEYMAPS
-vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'next buffer' })
-vim.keymap.set('n', '<leader>bp', '<cmd>bprev<CR>', { desc = 'previous buffer' })
+-- vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'next buffer' })
+-- vim.keymap.set('n', '<leader>bp', '<cmd>bprev<CR>', { desc = 'previous buffer' })
 -- Swap colon functionality with semicolon
 vim.keymap.set('n', ';', ':', { noremap = true })
 vim.keymap.set('n', ':', ';', { noremap = true })
@@ -44,7 +44,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- paste over text while keeping register perserved (not copying deleted selection)
 vim.keymap.set("x", "<leader>p", "\"_dP")
 -- delete into void register (delete without copying)
-vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d")
+vim.keymap.set({ "n", "v" }, "<leader>dv", "\"_d")
 -- find and replace the word under the cursor in the whole file
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
