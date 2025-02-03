@@ -25,7 +25,7 @@ return {
     },
   },
   require('which-key').add({
-    { "<leader>b", group = "buffers" },
+    { "<leader>b", group = "[B]uffers" },
     { "<leader>bc", "<cmd>BufferLinePickClose<cr>", desc = "Select a buffer to close" },
     { "<leader>bd",
     function()
