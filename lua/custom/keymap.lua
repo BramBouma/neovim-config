@@ -28,6 +28,8 @@ vim.keymap.set('n', '<leader>bp', '<cmd>bprev<CR>', { desc = 'previous buffer' }
 -- Swap colon functionality with semicolon
 vim.keymap.set('n', ';', ':', { noremap = true })
 vim.keymap.set('n', ':', ';', { noremap = true })
+-- map to get to neotree current view
+vim.keymap.set("n", "<leader>nt", "<cmd>Neotree position=current<CR>", { desc = "open neomap in netrw view"})
 
 
 -- FROM THEPRIMEAGEN (https://www.youtube.com/watch?v=w7i4amO_zaE)
