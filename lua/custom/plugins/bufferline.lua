@@ -1,3 +1,6 @@
+local diagnostic_icons = require('custom.utils.icons').diagnostic
+print(diagnostic_icons)
+
 return {
   'akinsho/bufferline.nvim',
   event = { 'BufReadPre', 'BufNewFile' },
@@ -10,16 +13,10 @@ return {
     options = {
       diagnostics = "nvim_lsp",
       diagnostics_indicator = function(_, _, diag)
-          local icons = {
-              error = "  ",  -- nf-fa-times_circle
-              warning = "  ", -- nf-fa-exclamation_triangle
-              info = "  ",    -- nf-fa-info_circle
-              hint = "  "     -- nf-fa-question_circle
-          }
-          local indicator = (diag.error and icons.error or "")
-              .. (diag.warning and icons.warning or "")
-              .. (diag.info and icons.info or "")
-              .. (diag.hint and icons.hint or "")
+          local indicator = (diag.error and diagnostic_icons.Error or "")
+              .. (diag.warning and diagnostic_icons.Warning or "")
+              .. (diag.info and diagnostic_icons.Info or "")
+              .. (diag.hint and diagnostic_icons.Hint or "")
           return vim.trim(indicator)
       end
     },
