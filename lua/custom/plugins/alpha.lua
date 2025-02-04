@@ -52,8 +52,9 @@ return {
             end
             dashboard.section.buttons.val = {
                 dashboard_button('f', '  Find file', '<cmd>Telescope find_files<cr>'),
-                dashboard_button('r', '  Recent files', '<cmd>Telescope oldfiles<cr>'),
+                dashboard_button('t', '󱏒  View Neo-Tree', "<cmd>Neotree position=float<CR>"),
                 dashboard_button('g', '  Grep', '<cmd>Telescope live_grep<cr>'),
+                dashboard_button('r', '  Recent files', '<cmd>Telescope oldfiles<cr>'),
                 dashboard_button('q', '  Quit', '<cmd>qa<cr>'),
                 { type = 'padding', val = 2 },
             }
