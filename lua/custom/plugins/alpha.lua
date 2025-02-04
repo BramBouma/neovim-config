@@ -60,7 +60,8 @@ return {
             dashboard.section.buttons.opts.hl = 'AlphaButtons'
             dashboard.opts.layout[1].val = #dashboard.section.buttons.val
 
-            dashboard.section.footer.val = "It's not a bug, it's a feature."
+            -- dashboard.section.footer.val = "It's not a bug, it's a feature. 👻"
+            dashboard.section.footer.val = "put down the config bro 👻"
             dashboard.section.footer.opts.hl = 'AlphaFooter'
 
             require('alpha').setup(dashboard.opts)
