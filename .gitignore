@@ -3,3 +3,6 @@
 *.swo
 *.bak
 *.tmp
+
+# ignore lazy-lock file
+lazy-lock.json
