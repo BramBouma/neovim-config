@@ -1,5 +1,6 @@
 return {
     "Isrothy/neominimap.nvim",
+    event = { 'BufReadPre', 'BufNewFile' },
     version = "v3.*.*",
     enabled = true,
     lazy = false, -- NO NEED to lazy load

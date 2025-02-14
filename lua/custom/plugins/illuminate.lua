@@ -1,5 +1,6 @@
 return {
     'RRethy/vim-illuminate',
+    event = { 'BufReadPre', 'BufNewFile' },
     config = function()
         require('illuminate').configure({
             delay = 100,  -- Delay before highlighting
