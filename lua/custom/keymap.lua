@@ -38,7 +38,9 @@ vim.keymap.set("n", "<leader>nt", "<cmd>Neotree position=current<CR>", { desc = 
 -- map to get to Lazy / Mason menus
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "[L]azy"})
 vim.keymap.set("n", "<leader>lm", "<cmd>Mason<CR>", { desc = "[M]ason"})
-
+-- map ctrl+a to select all
+vim.keymap.set("n", "<C-a>", "ggVG", { desc = 'Select all in visual mode from normal mode' })
+vim.keymap.set("v", "<C-a>", "vggVG", { desc = 'Select all in visual mode from visual mode' })
 
 -- FROM THEPRIMEAGEN (https://www.youtube.com/watch?v=w7i4amO_zaE)
 -- move selection up or down
