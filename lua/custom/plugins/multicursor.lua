@@ -22,7 +22,7 @@ return {
         set({"n", "v"}, "<C-S>", function() mc.matchSkipCursor(-1) end, { desc = 'skip cursor by matching previous word/selection'})
 
         -- Add all matches in the document
-        set({"n", "v"}, "<leader>A", mc.matchAllAddCursors)
+        -- set({"n", "v"}, "<leader>A", mc.matchAllAddCursors)
 
         -- You can also add cursors with any motion you prefer:
         -- set("n", "<right>", function()
@@ -63,7 +63,7 @@ return {
         set("n", "<leader>gv", mc.restoreCursors)
 
         -- Align cursor columns.
-        set("n", "<leader>a", mc.alignCursors)
+        -- set("n", "<leader>a", mc.alignCursors)
 
         -- Split visual selections by regex.
         set("v", "S", mc.splitCursors)
