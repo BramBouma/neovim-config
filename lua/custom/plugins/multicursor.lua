@@ -19,7 +19,7 @@ return {
         set({"n", "v"}, "<C-n>", function() mc.matchAddCursor(1) end, { desc = 'add cursor by matching next word/selection'})
         set({"n", "v"}, "<C-s>", function() mc.matchSkipCursor(1) end, { desc = 'skip cursor by matching next word/selection'})
         set({"n", "v"}, "<C-p>", function() mc.matchAddCursor(-1) end, { desc = 'add cursor by matching previous word/selection'})
-        set({"n", "v"}, "<C-S>", function() mc.matchSkipCursor(-1) end, { desc = 'skip cursor by matching previous word/selection'})
+        set({"n", "v"}, "<C-z>", function() mc.matchSkipCursor(-1) end, { desc = 'skip cursor by matching previous word/selection'})
 
         -- Add all matches in the document
         -- set({"n", "v"}, "<leader>A", mc.matchAllAddCursors)
