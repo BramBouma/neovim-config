@@ -2,7 +2,7 @@
 -- clear highlights on search when pressing <Esc> in normal mode
 -- vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+-- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 --  Use CTRL+<hjkl> to switch between windows
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -17,27 +17,21 @@ vim.keymap.set('n', '<M-k>', '<C-w>-', { desc = 'Decrease window height' })
 
 
 -- KEYMAPS FROM CHATGPT 
--- quick save <leader>w
-vim.keymap.set('n', '<leader>w', ':write<CR>', { desc = 'Save file' })
 -- shortcut for quickref <leader>hq
 vim.keymap.set('n', '<leader>hq', ':help quickref<CR>', { desc = 'Help: Quick Reference' })
 -- open config file <leader>ev
-vim.keymap.set('n', '<leader>ev', ':edit $MYVIMRC<CR>', { desc = 'Edit config file' })
--- reload config <leader>sv
-vim.keymap.set('n', '<leader>sv', ':source $MYVIMRC<CR>', { desc = 'Source config file' })
+vim.keymap.set('n', '<leader>hc', ':edit $MYVIMRC<CR>', { desc = 'Edit config file' })
 
 
 -- MY KEYMAPS
--- vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'next buffer' })
--- vim.keymap.set('n', '<leader>bp', '<cmd>bprev<CR>', { desc = 'previous buffer' })
 -- Swap colon functionality with semicolon
 vim.keymap.set('n', ';', ':', { noremap = true })
 vim.keymap.set('n', ':', ';', { noremap = true })
 -- map to get to neotree current view
-vim.keymap.set("n", "<leader>nt", "<cmd>Neotree position=current<CR>", { desc = "open neomap in netrw view"})
+vim.keymap.set("n", "<leader>ht", "<cmd>Neotree position=current<CR>", { desc = "open neomap in netrw view"})
 -- map to get to Lazy / Mason menus
-vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "[L]azy"})
-vim.keymap.set("n", "<leader>lm", "<cmd>Mason<CR>", { desc = "[M]ason"})
+vim.keymap.set("n", "<leader>hl", "<cmd>Lazy<CR>", { desc = "[L]azy"})
+vim.keymap.set("n", "<leader>hm", "<cmd>Mason<CR>", { desc = "[M]ason"})
 -- map ctrl+a to select all
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = 'Select all in visual mode from normal mode' })
 vim.keymap.set("v", "<C-a>", "vggVG", { desc = 'Select all in visual mode from visual mode' })
@@ -52,9 +46,12 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- paste over text while keeping register perserved (not copying deleted selection)
-vim.keymap.set("x", "<leader>p", "\"_dP")
+-- vim.keymap.set("x", "<leader>p", "\"_dP")
 -- delete into void register (delete without copying)
-vim.keymap.set({ "n", "v" }, "<leader>dv", "\"_d")
+-- vim.keymap.set({ "n", "v" }, "<leader>dv", "\"_d")
 -- find and replace the word under the cursor in the whole file
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>f", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[F]ind and replace'})
+-- require("which-key").add({
+-- 	{"<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], mode=""}
+-- })
 

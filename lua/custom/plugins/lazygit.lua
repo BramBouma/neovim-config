@@ -1,7 +1,8 @@
 -- nvim v0.8.0
 return {
     "kdheepak/lazygit.nvim",
-    lazy = true,
+    -- lazy = true,
+    event = { 'BufReadPre', 'BufNewFile' },
     cmd = {
         "LazyGit",
         "LazyGitConfig",
@@ -16,11 +17,9 @@ return {
     },
     config = function()
         require("telescope").load_extension("lazygit")
-    end,
 
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
-    keys = {
-        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Lazy[G]it" }
-    }
+        require("which-key").add({
+            {"<leader>hg", "<cmd>LazyGit<cr>", desc = "Lazy[G]it"}
+        })
+    end,
 }

@@ -3,8 +3,8 @@ return {
         "eandrju/cellular-automaton.nvim",
         cmd = { "CellularAutomaton make_it_rain", "CellularAutomaton game_of_life" },
         keys = {
-            {"<leader>ar", "<cmd>CellularAutomaton make_it_rain<cr>"},
-            {"<leader>ag", "<cmd>CellularAutomaton game_of_life<cr>"}
+            {"<leader>ar", "<cmd>CellularAutomaton make_it_rain<cr>", desc = "Make it rain"},
+            {"<leader>ag", "<cmd>CellularAutomaton game_of_life<cr>", desc = "Game of life"}
         },
     },
     {
