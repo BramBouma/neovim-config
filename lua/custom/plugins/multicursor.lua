@@ -9,11 +9,16 @@ return {
 
         local set = vim.keymap.set
 
+        local add = require("which-key").add
+
+        add({
+            { '<leader>c', group = '[C]ursor', mode = { 'n', 'x' }, icon = { icon = " ", color = "blue" } },
+        })
         -- Add or skip cursor above/below the main cursor.
         set({"n", "v"}, "<up>", function() mc.lineAddCursor(-1) end)
         set({"n", "v"}, "<down>", function() mc.lineAddCursor(1) end)
-        set({"n", "v"}, "<leader><up>", function() mc.lineSkipCursor(-1) end)
-        set({"n", "v"}, "<leader><down>", function() mc.lineSkipCursor(1) end)
+        -- set({"n", "v"}, "<C-Up>", function() mc.lineSkipCursor(-1) end)
+        -- set({"n", "v"}, "<C-Down>", function() mc.lineSkipCursor(1) end)
 
         -- Add or skip adding a new cursor by matching word/selection
         set({"n", "v"}, "<C-n>", function() mc.matchAddCursor(1) end, { desc = 'add cursor by matching next word/selection'})
@@ -46,7 +51,7 @@ return {
         set({"n", "v"}, "<c-q>", mc.toggleCursor)
 
         -- Clone every cursor and disable the originals.
-        set({"n", "v"}, "<leader><c-q>", mc.duplicateCursors)
+        -- set({"n", "v"}, "<leader><c-q>", mc.duplicateCursors)
 
         set("n", "<esc>", function()
             if not mc.cursorsEnabled() then

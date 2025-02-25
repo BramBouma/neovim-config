@@ -59,6 +59,6 @@ return {
         },
     },
     require("which-key").add({
-        { "<leader>x", group = "Trouble" },
+        { "<leader>x", group = "Trouble", icon = { cat = "filetype", name = "trouble", color = "blue" } },
     })
 }

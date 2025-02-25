@@ -294,6 +294,8 @@ require('lazy').setup({
       -- this setting is independent of vim.opt.timeoutlen
       delay = 0,
       icons = {
+        -- group = "󱡠 ",
+        group = " > ",
         -- set icon mappings to true if you have a Nerd Font
         mappings = vim.g.have_nerd_font,
         -- If you are using a Nerd Font: set icons.keys to an empty table which will use the
@@ -332,15 +334,8 @@ require('lazy').setup({
 
       -- Document existing key chains
       spec = {
-        {
-          '<leader>c',
-          group = '[C]ursor',
-          mode = { 'n', 'x' },
-          icon = ""
-        },
-        { '<leader>s', group = '[S]earch' },
-        { '<leader>h', group = '[H]elpers', mode = { 'n', 'v' } },
-        { '<leader>l', group = '[L]SP', mode = { 'n', 'v' } },
+        { '<leader>s', group = '[S]earch', icon = { icon = " ", color = "blue"} },
+        { '<leader>h', group = '[H]elpers', mode = { 'n', 'v' }, icon = { icon = "󰁤 ", color = "blue"} },
       },
     },
   },
@@ -525,9 +520,14 @@ require('lazy').setup({
           --
           -- In this case, we create a function that lets us more easily define mappings specific
           -- for LSP related items. It sets the mode, buffer and description for us each time.
+          require("which-key").add({
+            { '<leader>l', group = '[L]SP', mode = { 'n', 'v' }, icon = { cat = "filetype", name = vim.bo[event.buf].filetype } },
+          })
+
           local map = function(keys, func, desc, mode)
             mode = mode or 'n'
-            vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+            -- vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+            vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = desc })
           end
 
           -- Jump to the definition of the word under your cursor.

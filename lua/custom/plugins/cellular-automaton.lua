@@ -9,7 +9,7 @@ return {
     },
     {
         require("which-key").add({
-            { "<leader>a", group = "Automaton" },
+            { "<leader>a", group = "Automaton", icon = { icon = "󰃤 ", color = "blue" } },
 
         })
     },

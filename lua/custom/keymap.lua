@@ -1,3 +1,16 @@
+local add = function(keys, func, desc, mode, icon)
+	mode = mode or {'n'}
+	if icon then
+		require("which-key").add({
+			{keys, func, desc = desc, mode = mode, icon = icon}
+		})
+	else
+		require("which-key").add({
+			{keys, func, desc = desc, mode = mode}
+		})
+	end
+end
+
 -- KEYMAPS FROM KICKSTART
 -- clear highlights on search when pressing <Esc> in normal mode
 -- vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -50,7 +63,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- delete into void register (delete without copying)
 -- vim.keymap.set({ "n", "v" }, "<leader>dv", "\"_d")
 -- find and replace the word under the cursor in the whole file
-vim.keymap.set("n", "<leader>f", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[F]ind and replace'})
+-- vim.keymap.set("n", "<leader>f", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[F]ind and replace'}, icon = { icon = " ", color = "blue"} )
+add("<leader>f", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "[F]ind and replace", {'n'}, { icon = " ", color = "blue"})
 -- require("which-key").add({
 -- 	{"<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], mode=""}
 -- })

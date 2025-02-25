@@ -23,7 +23,7 @@ return {
       },
     })
     require('which-key').add({
-      { "<leader>b", group = "[B]uffers" },
+      { "<leader>b", group = "[B]uffers", icon = { icon = "󰝒 ", color = "blue"} },
       { "<leader>bc", "<cmd>BufferLinePickClose<cr>", desc = "Select a buffer to close" },
       { "<leader>bd",
       function()
