@@ -107,6 +107,12 @@ vim.opt.relativenumber = true
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
 
+-- tab widths
+local indentwidth = 4
+vim.opt.tabstop = indentwidth
+vim.opt.softtabstop = indentwidth
+vim.opt.shiftwidth = indentwidth
+
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
@@ -154,7 +160,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -654,6 +660,8 @@ require("lazy").setup({
 				marksman = {},
 				powershell_es = {},
 				jsonls = {},
+				texlab = {},
+
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
 				-- Some languages (like typescript) have entire language plugins that can be useful:
