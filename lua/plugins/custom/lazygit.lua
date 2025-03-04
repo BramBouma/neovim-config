@@ -13,7 +13,10 @@ return {
     -- optional for floating window border decoration
     dependencies = {
         "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope.nvim",
+        {
+            "nvim-telescope/telescope.nvim",
+            tag = "0.1.8",
+        },
     },
     config = function()
         require("telescope").load_extension("lazygit")
