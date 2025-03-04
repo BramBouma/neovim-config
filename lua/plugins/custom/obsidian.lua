@@ -16,7 +16,10 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/nvim-cmp",
-		"vim-telescope/telescope.nvim",
+		{
+			"vim-telescope/telescope.nvim",
+			tag = "0.1.8",
+		},
 		"nvim-treesitter/nvim-treesitter",
 	},
 	config = function()
