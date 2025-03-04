@@ -53,6 +53,7 @@ return {
 			{ "<leader>bo", "<cmd>BufferLinePick<cr>", desc = "Select a buffer to open" },
 			{ "<leader>bp", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer" },
 			{ "<leader>br", "<cmd>BufferLineCloseRight<cr>", desc = "Close buffers to the right" },
+			{ "<leader>bg", "<cmd>BufferLinePick<cr>", desc = "Go to buffer with pick" },
 		})
 	end,
 }
