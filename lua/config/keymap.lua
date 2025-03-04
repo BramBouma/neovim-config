@@ -13,7 +13,10 @@ end
 
 local wk = require("which-key")
 
--- KEYMAPS FROM KICKSTART
+--[[
+SECTION: KEYMAPS FROM KICKSTART
+--]]
+
 -- clear highlights on search when pressing <Esc> in normal mode
 -- vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
@@ -30,13 +33,26 @@ vim.keymap.set("n", "<M-l>", "<C-w>>", { desc = "Increase window width" })
 vim.keymap.set("n", "<M-j>", "<C-w>+", { desc = "Increase window height" })
 vim.keymap.set("n", "<M-k>", "<C-w>-", { desc = "Decrease window height" })
 
--- KEYMAPS FROM CHATGPT
+-- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
+-- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
+-- is not what someone will guess without a bit more experience.
+--
+-- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
+-- or just use <C-\><C-n> to exit terminal mode
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+--[[
+SECTION: KEYMAPS FROM CHATGPT
+--]]
+
 -- shortcut for quickref <leader>hq
 vim.keymap.set("n", "<leader>hq", ":help quickref<CR>", { desc = "Help: Quick Reference" })
 -- open config file <leader>ev
 vim.keymap.set("n", "<leader>hc", ":edit $MYVIMRC<CR>", { desc = "Edit config file" })
 
--- MY KEYMAPS
+--[[
+SECTION: MY KEYMAPS
+--]]
 
 wk.add({
 	{ "<leader>e", group = "[E]dit", icon = { icon = " ", color = "blue" } },
@@ -60,7 +76,10 @@ add("<leader>ea", "mzO<Esc>`z", "New line above", { "n" }, { icon = "↑ ", colo
 -- duplicate line below
 add("<leader>ed", "yyp", "Duplicate line below", { "n" }, { icon = "󰆏 ", color = "blue" })
 
--- FROM THEPRIMEAGEN (https://www.youtube.com/watch?v=w7i4amO_zaE)
+--[[
+SECTION: KEYMAPS FROM THE PRIMEAGEN (https://www.youtube.com/watch?v=w7i4amO_zaE)
+--]]
+
 -- move selection up or down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
