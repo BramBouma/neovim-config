@@ -91,7 +91,7 @@ return {
 			-- disable_frontmatter = false,
 
 			templates = {
-				folder = "templates",
+				folder = "config/templates",
 				date_format = "%m-%d-%Y",
 				substitutions = {},
 			},
