@@ -64,6 +64,7 @@ return {
 
 			require("which-key").add({
 				{ "<leader>m", group = "[M]arkdown", icon = { icon = " ", color = "blue" } },
+				{ "<leader>mt", "<cmd>RenderMarkdown buf_toggle<cr>", icon = { icon = " ", color = "blue" } },
 				-- { "<leader>b", group = "[B]uffers", icon = { icon = "󰝒 ", color = "blue"} },
 			})
 		end,
