@@ -11,7 +11,7 @@ return {
         -- },
     },
     require('which-key').add({
-        { "<leader>hi", "<cmd>IconPickerNormal<cr>", desc = "[I]con picker", icon = { icon = "🎨"}}
+        { "<leader>hi", "<cmd>IconPickerNormal<cr>", desc = "[I]con picker", icon = { icon = " ", color="blue"}}
     })
 }
 
