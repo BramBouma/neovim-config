@@ -194,7 +194,18 @@ return {
 				rust_analyzer = {},
 
 				-- Python
-				pylsp = {},
+				pylsp = {
+					settings = {
+						pylsp = {
+							plugins = {
+								pycodestyle = {
+									enabled = true,
+									ignore = { "E501" },
+								},
+							},
+						},
+					},
+				},
 				ruff = {},
 
 				zls = {},

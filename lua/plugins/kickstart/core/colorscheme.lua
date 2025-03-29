@@ -5,7 +5,7 @@ return { -- Change the name of the colorscheme plugin below, and then
 	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
 	-- 'folke/tokyonight.nvim',
 	-- 'rebelot/kanagawa.nvim',
-	-- 'Mofiqul/vscode.nvim',
+	-- "Mofiqul/vscode.nvim",
 	"projekt0n/github-nvim-theme",
 	priority = 1000, -- Make sure to load this before all the other start plugins.
 	init = function()
