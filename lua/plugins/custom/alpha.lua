@@ -31,6 +31,7 @@ return {
 				dashboard_button("l", "  Lazy", "<cmd>Lazy<cr>"),
 				dashboard_button("m", "󰒋  Mason", "<cmd>Mason<cr>"),
 				dashboard_button("r", "  Recent files", "<cmd>Telescope oldfiles<cr>"),
+				dashboard_button("p", "󰌌  Practice typing", "<cmd>Typr<cr>"),
 				dashboard_button("q", "  Quit", "<cmd>qa<cr>"),
 				{ type = "padding", val = 2 },
 			}
