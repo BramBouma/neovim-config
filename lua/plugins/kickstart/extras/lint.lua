@@ -1,17 +1,4 @@
 return {
-
-<<<<<<< HEAD
-  { -- Linting
-    'mfussenegger/nvim-lint',
-    event = { 'BufReadPre', 'BufNewFile' },
-    config = function()
-      local lint = require 'lint'
-      lint.linters_by_ft = {
-        markdown = { 'markdownlint' },
-        -- python = { 'ruff', 'mypy' }
-        python = { 'mypy' }
-      }
-=======
 	{ -- Linting
 		"mfussenegger/nvim-lint",
 		event = { "BufReadPre", "BufNewFile" },
@@ -23,7 +10,6 @@ return {
 				-- python = { 'ruff', 'mypy' },
 				python = { "mypy" },
 			}
->>>>>>> 4632ece97d6d5faaae0a4970bca7680e98920adb
 
 			-- To allow other plugins to add linters to require('lint').linters_by_ft,
 			-- instead set linters_by_ft like this:
