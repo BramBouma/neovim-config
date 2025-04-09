@@ -58,8 +58,8 @@ wk.add({
 	{ "<leader>e", group = "[E]dit", icon = { icon = " ", color = "blue" } },
 })
 -- Swap colon functionality with semicolon
-vim.keymap.set("n", ";", ":", { noremap = true })
-vim.keymap.set("n", ":", ";", { noremap = true })
+vim.keymap.set({ "n", "v" }, ";", ":", { noremap = true })
+vim.keymap.set({ "n", "v" }, ":", ";", { noremap = true })
 -- map to get to neotree current view
 vim.keymap.set("n", "<leader>ht", "<cmd>Neotree position=current<CR>", { desc = "open neomap in netrw view" })
 -- map to get to Lazy / Mason menus

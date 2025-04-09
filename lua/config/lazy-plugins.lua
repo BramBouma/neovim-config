@@ -4,8 +4,8 @@ require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
 	-- SECTION: core plugins from kickstart.nvim
-	require("plugins.kickstart.core.gitsigns"),
 	require("plugins.kickstart.core.which-key"),
+	require("plugins.kickstart.core.gitsigns"),
 	require("plugins.kickstart.core.telescope"),
 	require("plugins.kickstart.core.lspconfig"),
 	require("plugins.kickstart.core.conform"),

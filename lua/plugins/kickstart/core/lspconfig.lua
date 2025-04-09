@@ -202,6 +202,9 @@ return {
 									enabled = true,
 									ignore = { "E501" },
 								},
+								pyflakes = {
+									enabled = false,
+								},
 							},
 						},
 					},
