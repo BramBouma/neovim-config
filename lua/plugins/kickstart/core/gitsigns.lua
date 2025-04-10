@@ -14,7 +14,7 @@
 return {
 	{
 		"lewis6991/gitsigns.nvim",
-		event = { 'BufReadPre', 'BufNewFile' },
+		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			signs = {
 				add = { text = "+" },
@@ -26,33 +26,33 @@ return {
 			signcolumn = true,
 			numhl = true,
 			linehl = false,
-			word_diff = true,
+			word_diff = false,
 		},
 	},
 	-- {
-		-- require('which-key').add({
-		-- 		{ "<leader>g", group = "[G]it diff", icon = { icon = " ", color = "blue" } },
-		-- 		{
-		-- 			"<leader>gl",
-		-- 			"<cmd>Gitsigns toggle_linehl<cr>",
-		-- 			desc = "toggle [L]ine highlight",
-		-- 			icon = { icon = " ", color = "blue" },
-		-- 			mode = { "n", "v" },
-		-- 		},
-		-- 		{
-		-- 			"<leader>gw",
-		-- 			"<cmd>Gitsigns toggle_word_diff<cr>",
-		-- 			desc = "toggle [W]ord diff",
-		-- 			icon = { icon = " ", color = "blue" },
-		-- 			mode = { "n", "v" },
-		-- 		},
-		-- 		{
-		-- 			"<leader>gn",
-		-- 			"<cmd>Gitsigns toggle_numhl<cr>",
-		-- 			desc = "toggle [N]umber highlight",
-		-- 			icon = { icon = " ", color = "blue" },
-		-- 			mode = { "n", "v" },
-		-- 		},
-		-- })
+	-- require('which-key').add({
+	-- 		{ "<leader>g", group = "[G]it diff", icon = { icon = " ", color = "blue" } },
+	-- 		{
+	-- 			"<leader>gl",
+	-- 			"<cmd>Gitsigns toggle_linehl<cr>",
+	-- 			desc = "toggle [L]ine highlight",
+	-- 			icon = { icon = " ", color = "blue" },
+	-- 			mode = { "n", "v" },
+	-- 		},
+	-- 		{
+	-- 			"<leader>gw",
+	-- 			"<cmd>Gitsigns toggle_word_diff<cr>",
+	-- 			desc = "toggle [W]ord diff",
+	-- 			icon = { icon = " ", color = "blue" },
+	-- 			mode = { "n", "v" },
+	-- 		},
+	-- 		{
+	-- 			"<leader>gn",
+	-- 			"<cmd>Gitsigns toggle_numhl<cr>",
+	-- 			desc = "toggle [N]umber highlight",
+	-- 			icon = { icon = " ", color = "blue" },
+	-- 			mode = { "n", "v" },
+	-- 		},
+	-- })
 	-- },
 }

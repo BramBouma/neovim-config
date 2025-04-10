@@ -1,26 +1,26 @@
 return {
 	{
-		'olimorris/codecompanion.nvim',
+		"olimorris/codecompanion.nvim",
 		dependencies = {
-			'nvim-lua/plenary.nvim',
-			'nvim-treesitter/nvim-treesitter',
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
 			{
-				'MeanderingProgrammer/render-markdown.nvim',
-				ft = { 'markdown', 'codecompanion' },
+				"MeanderingProgrammer/render-markdown.nvim",
+				ft = { "markdown", "codecompanion" },
 			},
 		},
-		event = { 'BufReadPost', 'BufNewFile' },
+		event = { "BufReadPost", "BufNewFile" },
 		config = function()
-			require('codecompanion').setup({
+			require("codecompanion").setup({
 				strategies = {
 					chat = {
-						adapter = 'gemini',
+						adapter = "gemini",
 					},
 					inline = {
-						adapter = 'gemini',
+						adapter = "gemini",
 					},
 					cmd = {
-						adapter = 'gemini',
+						adapter = "gemini",
 					},
 				},
 				display = {
@@ -29,14 +29,14 @@ return {
 						auto_scroll = false,
 					},
 					action_palette = {
-						provider = "telescope"
+						provider = "telescope",
 					},
 				},
 			})
 		end,
 	},
 	{
-		require('which-key').add({
+		require("which-key").add({
 			{ "<leader>a", group = "[A]I", icon = { icon = "󰚩 ", color = "blue" } },
 			{
 				"<leader>ap",
@@ -46,9 +46,9 @@ return {
 				mode = { "n", "v" },
 			},
 			{
-				"<leader>at",
+				"<leader>ac",
 				"<cmd>CodeCompanionChat Toggle<cr>",
-				desc = "[T]oggle chat buffer",
+				desc = "toggle [C]hat buffer",
 				icon = { icon = " ", color = "blue" },
 				mode = { "n", "v" },
 			},
@@ -59,6 +59,6 @@ return {
 				icon = { icon = " ", color = "blue" },
 				mode = { "v" },
 			},
-		})
-	}
+		}),
+	},
 }
