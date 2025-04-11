@@ -47,8 +47,6 @@ SECTION: KEYMAPS FROM CHATGPT
 
 -- shortcut for quickref <leader>hq
 vim.keymap.set("n", "<leader>hq", ":help quickref<CR>", { desc = "Help: Quick Reference" })
--- open config file <leader>ev
-vim.keymap.set("n", "<leader>hc", ":edit $MYVIMRC<CR>", { desc = "Edit config file" })
 
 --[[
 SECTION: MY KEYMAPS
