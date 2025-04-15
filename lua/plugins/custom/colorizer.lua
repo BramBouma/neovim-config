@@ -9,6 +9,7 @@ return {
 				"python",
 				"css",
 				"javascript",
+				"json",
 			},
 		},
 

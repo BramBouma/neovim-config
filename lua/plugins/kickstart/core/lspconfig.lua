@@ -217,6 +217,9 @@ return {
 				jsonls = {},
 				texlab = {},
 				sqlls = {},
+				ts_ls = {},
+				html = {},
+				cssls = {},
 
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
