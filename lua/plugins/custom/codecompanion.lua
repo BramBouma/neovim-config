@@ -31,6 +31,9 @@ return {
 					action_palette = {
 						provider = "telescope",
 					},
+					diff = {
+						provider = "mini_diff",
+					},
 				},
 			})
 		end,
