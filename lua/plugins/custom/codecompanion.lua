@@ -1,6 +1,13 @@
+local plugin_toggles = require("utils.plugin_toggles")
+
+if not plugin_toggles.codecompanion then
+	return {}
+end
+
 return {
 	{
 		"olimorris/codecompanion.nvim",
+		-- enabled = plugin_toggles.codecompanion,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
@@ -40,7 +47,6 @@ return {
 	},
 	{
 		require("which-key").add({
-			{ "<leader>a", group = "[A]I", icon = { icon = "󰚩 ", color = "blue" } },
 			{
 				"<leader>ap",
 				"<cmd>CodeCompanionActions<cr>",

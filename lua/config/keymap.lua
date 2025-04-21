@@ -1,3 +1,5 @@
+local plugin_toggles = require("utils.plugin_toggles")
+
 local add = function(keys, func, desc, mode, icon)
 	mode = mode or { "n" }
 	if icon then
@@ -55,6 +57,14 @@ SECTION: MY KEYMAPS
 wk.add({
 	{ "<leader>e", group = "[E]dit", icon = { icon = " ", color = "blue" } },
 })
+
+
+if plugin_toggles.codecompanion or plugin_toggles.copilot then
+	wk.add({
+		{ "<leader>a", group = "[A]I", icon = { icon = "󰚩 ", color = "blue" } },
+	})
+end
+
 -- Swap colon functionality with semicolon
 vim.keymap.set({ "n", "v" }, ";", ":", { noremap = true })
 vim.keymap.set({ "n", "v" }, ":", ";", { noremap = true })
