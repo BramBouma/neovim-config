@@ -9,14 +9,14 @@ return {
     opts = {
       -- Panel is used to display Copilot status messages / suggestions panel
       panel = {
-        enabled = true,       -- Enable the Copilot panel
+        enabled = false,       -- Enable the Copilot panel
         auto_refresh = false, -- Refresh panel automatically (can be noisy)
         keymap = {
           jump_prev = "[[",   -- Keymap to jump to previous suggestion in panel
           jump_next = "]]",   -- Keymap to jump to next suggestion in panel
           accept = "<CR>",   -- Keymap to accept suggestion shown in panel
           refresh = "gr",     -- Keymap to refresh suggestions in panel
-          open = "<leader>aco" -- Define a keymap to open the panel (e.g., <leader>a c o)
+          open = "<C-c>" -- Define a keymap to open the panel (e.g., <leader>a c o)
         },
         -- Layout of the panel
         layout = {
@@ -32,9 +32,9 @@ return {
         debounce = 75,          -- Delay in ms before fetching suggestions
         keymap = {
           -- accept = "<C-a>",       -- Accept suggestion (used IF cmp doesn't handle it) - Choose an unused keybind
-          accept = "<Tab>",       -- Accept suggestion (used IF cmp doesn't handle it) - Choose an unused keybind
+          accept = "<S-Tab>",       -- Accept suggestion (used IF cmp doesn't handle it) - Choose an unused keybind
           accept_word = false,  -- Map to accept the next word suggestion
-          accept_line = false,  -- Map to accept the next line suggestion
+          accept_line = "<Tab>",  -- Map to accept the next line suggestion
           next = "<M-]>",      -- Cycle to next suggestion (Alt+]) - Choose unused keybind
           prev = "<M-[>",      -- Cycle to previous suggestion (Alt+[) - Choose unused keybind
           dismiss = "<C-e>",    -- Dismiss suggestions (Ctrl+e) - Choose unused keybind

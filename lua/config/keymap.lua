@@ -65,6 +65,7 @@ if plugin_toggles.codecompanion or plugin_toggles.copilot then
 	})
 end
 
+
 -- Swap colon functionality with semicolon
 vim.keymap.set({ "n", "v" }, ";", ":", { noremap = true })
 vim.keymap.set({ "n", "v" }, ":", ";", { noremap = true })

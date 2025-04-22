@@ -47,6 +47,7 @@ return {
 	},
 	{
 		require("which-key").add({
+			-- { "<leader>a", group = "[A]I", icon = { icon = "󰚩 ", color = "blue" } },
 			{
 				"<leader>ap",
 				"<cmd>CodeCompanionActions<cr>",

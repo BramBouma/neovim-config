@@ -30,21 +30,26 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 
 			-- Adds other completion capabilities.
-			--  nvim-cmp does not ship with all sources by default. They are split
-			--  into multiple repos for maintenance purposes.
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-buffer",
 			"onsails/lspkind.nvim",
+			"zbirenbaum/copilot-cmp",
 		},
 		config = function()
 			-- See `:help cmp`
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			local lspkind = require("lspkind")
+			local copilot_cmp = require("copilot_cmp")
 
 			luasnip.config.setup({})
+
+			copilot_cmp.setup({
+				method = "getCompletionsCycling",
+				fix_pairs = true,
+			})
 
 			cmp.setup({
 				snippet = {
@@ -53,7 +58,6 @@ return {
 					end,
 				},
 				completion = { completeopt = "menu,menuone,noinsert" },
-
 
 				-- experimental ghost-text and formatting
 				experimental = {
@@ -81,16 +85,20 @@ return {
 								cmdline = "CMD",
 								codecompanion = "Companion",
 								lazydev = "LazyDev",
+								copilot = "Copilot",
 							}
 							vim_item.menu = "[" .. (source_map[source_name] or source_name) .. "]"
-							return vim_item
+							-- Optional: Add extra highlighting for Copilot suggestions
+								if entry.source.name == "copilot" then
+									vim_item.kind = " " .. vim_item.kind -- Add GitHub icon (requires nerd font)
+								end
+								return vim_item
 						end,
 					}),
 				},
 
 				-- For an understanding of why these mappings were
 				-- chosen, you will need to read `:help ins-completion`
-				--
 				-- No, but seriously. Please read `:help ins-completion`, it is really good!
 				mapping = cmp.mapping.preset.insert({
 					-- Select the [n]ext item
@@ -142,13 +150,13 @@ return {
 				}),
 
 				sources = {
+					-- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
 					{ name = "nvim_lsp" },
-					{ name = "codecompanion" },
+					{ name = "copilot" },
 					{ name = "luasnip" },
 					{ name = "lazydev", group_index = 0 },
-						-- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
-					{ name = "path" },
 					{ name = "buffer", keyword_length = 3 },
+					{ name = "path" },
 				},
 			})
 
