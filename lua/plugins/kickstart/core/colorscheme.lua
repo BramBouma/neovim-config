@@ -1,22 +1,41 @@
--- You can easily change to a different colorscheme.
-return { -- Change the name of the colorscheme plugin below, and then
-	-- change the command in the config to whatever the name of that colorscheme is.
-	--
-	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-	-- 'folke/tokyonight.nvim',
-	-- 'rebelot/kanagawa.nvim',
-	-- "Mofiqul/vscode.nvim",
-	--
-	"projekt0n/github-nvim-theme",
-	priority = 1000, -- Make sure to load this before all the other start plugins.
-	init = function()
-		-- Load the colorscheme here.
-		-- Like many other themes, this one has different styles, and you could load
-		-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-		vim.cmd.colorscheme("github_dark_default")
+return {
+	-- SECTION: install tokynight and custom override the entire colorscheme lol
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			local theme = require("theme.tokyonight")
+			local transparent = false
 
-		-- You can configure highlights by doing something like:
-		vim.cmd.hi("Comment gui=none")
-		vim.cmd.hi("Search guibg=#ff7b72 guifg=#000000")
-	end,
+			require("tokyonight").setup({
+				style = "night",
+				transparent = transparent,
+				styles = {
+					sidebars = transparent and "transparent" or "dark",
+					floats = transparent and "transparent" or "dark",
+				},
+
+				-- NOTE: override colors based on theme/tokyonight.lua
+				on_colors = function(c)
+					theme.on_colors(c, transparent)
+				end,
+
+				-- NOTE: override highlight groups based on theme/tokyonight.lua
+				on_highlights = theme.on_highlights,
+			})
+
+			vim.cmd.colorscheme("tokyonight")
+			vim.cmd.hi("Search guibg=#ff7b72 guifg=#000000")
+		end,
+	},
+
+	-- SECTION: install vscode colorscheme as well cuz why not
+	{
+		"Mofiqul/vscode.nvim",
+		lazy = false,
+		priority = 999,
+		config = function() end,
+	},
 }
+-- 'rebelot/kanagawa.nvim',

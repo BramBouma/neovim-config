@@ -1,4 +1,4 @@
-local diagnostic_icons = require("custom.utils.icons").diagnostic
+local diagnostic_icons = require("utils.icons").diagnostic
 print(diagnostic_icons)
 
 return {
