@@ -21,7 +21,6 @@ return {
 				{ sc = "l", txt = "  Lazy", cmd = "<cmd>Lazy<cr>" },
 				{ sc = "m", txt = "󰒋  Mason", cmd = "<cmd>Mason<cr>" },
 				{ sc = "r", txt = "  Recent files", cmd = "<cmd>Telescope oldfiles<cr>" },
-				{ sc = "p", txt = "󰌌  Practice typing", cmd = "<cmd>Typr<cr>" },
 				{ sc = "q", txt = "  Quit", cmd = "<cmd>qa<cr>" },
 			}
 
@@ -73,6 +72,9 @@ return {
 			local ms = (type(raw_time) == "string") and (tonumber(raw_time:match("(%d+%.?%d*)")) or 0) or raw_time
 			local sec = ms / 1000
 
+			-- startup meter
+			local startup_col = ms < 150 and "🟢" or (ms < 200 and "🟡" or "🔴")
+
 			-- clock
 			local clock = os.date("%Y-%m-%d %H:%M")
 
@@ -81,8 +83,14 @@ return {
 			local ai_enabled = plugin_toggles.copilot or plugin_toggles.codecompanion
 			local ai_status = ai_enabled and "AI: Enabled ✅" or "AI: Disabled ❌"
 
-			dashboard.section.footer.val =
-				string.format("  %d plugins loaded in %.2f s   %s     %s", plugin_ct, sec, ai_status, clock)
+			dashboard.section.footer.val = string.format(
+				"%s  %d plugins loaded in %.2f s   %s     %s",
+				startup_col,
+				plugin_ct,
+				sec,
+				ai_status,
+				clock
+			)
 			dashboard.section.footer.opts.hl = "AlphaFooter"
 
 			-- SECTION:══════════════════════════════════════

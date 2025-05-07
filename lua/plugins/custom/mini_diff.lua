@@ -8,7 +8,6 @@ return {
 				-- Disabled by default
 				source = diff.gen_source.save(),
 			})
-			-- MiniDiff.toggle_overlay()
 
 			local diff_icon = { icon = " ", color = "blue" }
 			require("which-key").add({

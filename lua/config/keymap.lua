@@ -58,13 +58,19 @@ wk.add({
 	{ "<leader>e", group = "[E]dit", icon = { icon = " ", color = "blue" } },
 })
 
-
 if plugin_toggles.codecompanion or plugin_toggles.copilot then
 	wk.add({
 		{ "<leader>a", group = "[A]I", icon = { icon = "󰚩 ", color = "blue" } },
 	})
 end
 
+--[[
+SECTION: TEMP
+--]]
+vim.keymap.set("n", "<leader>hd", "<cmd>colorscheme github_dark_default<CR>", { desc = "swap to github dark" })
+vim.keymap.set("n", "<leader>hn", "<cmd>colorscheme tokyonight<CR>", { desc = "swap to tokyonight" })
+vim.keymap.set("n", "<leader>hs", "<cmd>Telescope colorscheme<CR>", { desc = "search colorschemes" })
+vim.keymap.set("n", "<leader>hk", "<cmd>colorscheme kanagawa-dragon<CR>", { desc = "search colorschemes" })
 
 -- Swap colon functionality with semicolon
 vim.keymap.set({ "n", "v" }, ";", ":", { noremap = true })

@@ -2,7 +2,9 @@ return {
 	-- SECTION: install tokynight and custom override the entire colorscheme lol
 	{
 		"folke/tokyonight.nvim",
-		lazy = false,
+		-- lazy = false,
+		lazy = true,
+		event = "VeryLazy",
 		priority = 1000,
 		config = function()
 			local theme = require("theme.tokyonight")
@@ -33,9 +35,29 @@ return {
 	-- SECTION: install vscode colorscheme as well cuz why not
 	{
 		"Mofiqul/vscode.nvim",
-		lazy = false,
-		priority = 999,
+		lazy = true,
+		event = "VeryLazy",
 		config = function() end,
+	},
+	{
+		"projekt0n/github-nvim-theme",
+		lazy = true,
+		event = "VeryLazy",
+		config = function()
+			require("github-theme").setup({
+				-- setup
+			})
+		end,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = true,
+		event = "VeryLazy",
+		config = function()
+			require("kanagawa").setup({
+				-- setup
+			})
+		end,
 	},
 }
 -- 'rebelot/kanagawa.nvim',

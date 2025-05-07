@@ -1,7 +1,6 @@
 -- [[ Configure and install plugins ]]
 require("lazy").setup({
-	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+	"tpope/vim-sleuth",
 
 	-- SECTION: core plugins from kickstart.nvim
 	require("plugins.kickstart.core.which-key"),
@@ -45,6 +44,20 @@ require("lazy").setup({
 			start = "🚀",
 			task = "📌",
 			lazy = "💤 ",
+		},
+	},
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"gzip",
+				"tarPlugin",
+				"zipPlugin",
+				"netrwPlugin",
+				"matchit",
+				"matchparen",
+				"tutor",
+				"tohtml",
+			},
 		},
 	},
 })

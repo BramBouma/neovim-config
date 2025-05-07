@@ -1,7 +1,8 @@
 return {
 	{
 		"NvChad/nvim-colorizer.lua", -- Highlight hex and rgb colors within Neovim
-		event = { "BufReadPre", "BufNewFile" },
+		-- event = { "BufReadPre", "BufNewFile" },
+		event = "VeryLazy",
 		-- cmd = "ColorizerToggle",
 		opts = {
 			filetypes = {
