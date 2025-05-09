@@ -71,6 +71,12 @@ vim.keymap.set("n", "<leader>hd", "<cmd>colorscheme github_dark_default<CR>", { 
 vim.keymap.set("n", "<leader>hn", "<cmd>colorscheme tokyonight<CR>", { desc = "swap to tokyonight" })
 vim.keymap.set("n", "<leader>hs", "<cmd>Telescope colorscheme<CR>", { desc = "search colorschemes" })
 vim.keymap.set("n", "<leader>hk", "<cmd>colorscheme kanagawa-dragon<CR>", { desc = "swap to kanagawa" })
+local show_hlgroup = function ()
+	local result = vim.treesitter.get_captures_at_cursor(0)
+	print(vim.inspect(result))
+end
+vim.keymap.set("n", "<leader>hh", show_hlgroup, { desc = "show hi group" })
+
 
 -- Swap colon functionality with semicolon
 vim.keymap.set({ "n", "v" }, ";", ":", { noremap = true })

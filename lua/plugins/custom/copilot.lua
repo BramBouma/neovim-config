@@ -27,7 +27,7 @@ return {
       -- Suggestion controls how suggestions are fetched and displayed *inline*
       -- Note: nvim-cmp integration often takes precedence for inline display
       suggestion = {
-        enabled = true,           -- Enable fetching suggestions
+        enabled = false,           -- Enable fetching suggestions
         auto_trigger = true,      -- Fetch suggestions automatically as you type
         debounce = 75,          -- Delay in ms before fetching suggestions
         keymap = {

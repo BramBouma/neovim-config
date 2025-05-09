@@ -22,10 +22,10 @@ return {
 	alpha = true, -- Dashboard
 	bufferline = true, -- Assuming you have this file
 	cellular_automaton = true, -- Example: Disabled
-	codecompanion = false, -- AI companion
+	codecompanion = true, -- AI companion
 	colorizer = true, -- Color highlighter
 	context = true, -- Code context
-	copilot = false, -- Github Copilot
+	copilot = true, -- Github Copilot
 	iconpicker = true, -- Icon picker
 	illuminate = true, -- Word highlighting
 	lazygit = true, -- Lazygit integration

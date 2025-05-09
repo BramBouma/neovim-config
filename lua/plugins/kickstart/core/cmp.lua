@@ -153,6 +153,7 @@ return {
 					-- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
 					{ name = "nvim_lsp" },
 					{ name = "copilot" },
+					{ name = "codecompanion" },
 					{ name = "luasnip" },
 					{ name = "lazydev", group_index = 0 },
 					{ name = "buffer", keyword_length = 3 },
