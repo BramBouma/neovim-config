@@ -67,6 +67,10 @@ M.on_highlights = function(H, c)
 	H.IblIndent = { fg = util.blend(fg_dark, 0.5, bg) }
 	H.IblScope = { fg = util.blend(fg, 0.5, fg_dark) }
 
+	--SECTION: indent blankline
+	H.SnacksIndentScope = { fg = util.blend(fg, 0.5, fg_dark) }
+
+
 	--SECTION: status line
 	H.MiniStatuslineModeNormal = { bg = true_blue, fg = fg }
 	H.MiniStatuslineModeInsert = { bg = forest, fg = fg }
