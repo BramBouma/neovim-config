@@ -9,13 +9,12 @@ local red = "#ff7b72"
 local med_grey = "#999999"
 local dark_grey = "#484f58"
 local darker_grey = "#222D3D"
-local light_blue = "#58a6ff"
+local light_blue = "#427eff"
 local green = "#58af66"
 local green1 = "#73a598"
 local forest = "#064023"
 local blue1 = "#89aebc"
 local orange = "#d29922"
-
 
 local bg = "#0d1117"
 -- local bg = "#19191e"
@@ -32,34 +31,33 @@ local git_add = util.blend(green, 0.7, fg_dark)
 local git_change = util.blend(orange, 0.7, fg_dark)
 local git_delete = util.blend(true_red, 0.7, fg_dark)
 
-M.on_colors = function(colors, transparent)
+M.on_colors = function(c, transparent)
 	--SECTION: backgrounds
-	colors.bg = bg
-	colors.bg_dark = transparent and colors.none or bg_dark
-	colors.bg_float = transparent and colors.none or bg
-	colors.bg_highlight = bg_highlight
-	colors.bg_popup = bg
-	colors.bg_sidebar = transparent and colors.none or bg
-	colors.bg_visual = bg_visual
+	c.bg = bg
+	c.bg_dark = transparent and c.none or bg_dark
+	c.bg_float = transparent and c.none or bg
+	c.bg_highlight = bg_highlight
+	c.bg_popup = bg
+	c.bg_sidebar = transparent and c.none or bg
+	c.bg_visual = bg_visual
 
 	--SECTION: foregrounds
-	colors.fg = fg
-	colors.fg_float = fg
-	colors.fg_dark = fg_dark
-	colors.fg_sidebar = fg
-	colors.fg_gutter = util.blend(fg_dark, 0.5, bg)
-	colors.green1 = green1
-	colors.info = blue1
+	c.fg = fg
+	c.fg_float = fg
+	c.fg_dark = fg_dark
+	c.fg_sidebar = fg
+	c.fg_gutter = util.blend(fg_dark, 0.5, bg)
+	c.green1 = green1
+	c.info = blue1
 
 	--SECTION: ui
-	colors.border = border or colors.none
-	colors.hint = colors.blue
+	c.border = border or c.none
+	c.hint = c.blue
 
 	--SECTION: git
-	colors.git.add = git_add
-	colors.git.change = git_change
-	colors.git.delete = git_delete
-
+	c.git.add = git_add
+	c.git.change = git_change
+	c.git.delete = git_delete
 end
 
 M.on_highlights = function(H, c)
@@ -113,10 +111,10 @@ M.on_highlights = function(H, c)
 	H.Comment = { fg = fg_dark, italic = false }
 
 	-- string & constants
-	H.String = {fg = c.green }
-	H.Character = {fg = c.green }
-	H.Constant = {fg = c.orange }
-	H["@constant.builtin"] = {fg = c.orange }
+	H.String = { fg = util.blend(light_blue, 0.6, fg) }
+	H.Character = { fg = light_blue }
+	H.Constant = { fg = c.orange }
+	H["@constant.builtin"] = { fg = c.orange }
 
 	-- numbers & booleans
 	H.Number = { fg = c.orange }
@@ -140,17 +138,17 @@ M.on_highlights = function(H, c)
 	H["@variable.builtin"] = H["@variable.parameter"]
 
 	-- link treesitter groups
-	H["@keyword"]           = { link = "Keyword" }
-	H["@keyword.function"]  = { link = "Keyword" }
-	H["@operator"]          = { link = "Operator" }
-	H["@string"]            = { link = "String" }
-	H["@number"]            = { link = "Number" }
-	H["@boolean"]           = { link = "Boolean" }
-	H["@function"]          = { link = "Function" }
-	H["@method"]            = { link = "Function" }
-	H["@type"]              = { link = "Type" }
-	H["@constant"]          = { link = "Constant" }
-	H["@variable"]          = { link = "Identifier" }
+	H["@keyword"] = { link = "Keyword" }
+	H["@keyword.function"] = { link = "Keyword" }
+	H["@operator"] = { link = "Operator" }
+	H["@string"] = { link = "String" }
+	H["@number"] = { link = "Number" }
+	H["@boolean"] = { link = "Boolean" }
+	H["@function"] = { link = "Function" }
+	H["@method"] = { link = "Function" }
+	H["@type"] = { link = "Type" }
+	H["@constant"] = { link = "Constant" }
+	H["@variable"] = { link = "Identifier" }
 
 	H["@lsp.type.variable"] = H["@variable"]
 	H["@module"] = { fg = fg }
