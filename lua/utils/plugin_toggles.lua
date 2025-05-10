@@ -14,7 +14,7 @@ return {
 
 	-- Kickstart Extras
 	autopairs = true,
-	indent_line = true,
+	indent_line = false,
 	lint = true,
 	neo_tree = true,
 

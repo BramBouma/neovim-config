@@ -1,4 +1,3 @@
--- [[ Configure and install plugins ]]
 require("lazy").setup({
 	"tpope/vim-sleuth",
 
