@@ -25,7 +25,7 @@ return {
 	codecompanion = true, -- AI companion
 	colorizer = true, -- Color highlighter
 	context = true, -- Code context
-	copilot = true, -- Github Copilot
+	copilot = false, -- Github Copilot
 	iconpicker = true, -- Icon picker
 	illuminate = true, -- Word highlighting
 	lazygit = true, -- Lazygit integration

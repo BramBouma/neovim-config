@@ -68,7 +68,6 @@ M.on_highlights = function(H, c)
 	--SECTION: indent blankline
 	H.SnacksIndentScope = { fg = util.blend(fg, 0.5, fg_dark) }
 
-
 	--SECTION: status line
 	H.MiniStatuslineModeNormal = { bg = true_blue, fg = fg }
 	H.MiniStatuslineModeInsert = { bg = forest, fg = fg }
@@ -115,7 +114,8 @@ M.on_highlights = function(H, c)
 	H.Comment = { fg = fg_dark, italic = false }
 
 	-- string & constants
-	H.String = { fg = util.blend(light_blue, 0.6, fg) }
+	-- H.String = { fg = util.blend(light_blue, 0.6, fg) }
+	H.String = { fg = util.blend(green, 0.6, fg) }
 	H.Character = { fg = light_blue }
 	H.Constant = { fg = c.orange }
 	H["@constant.builtin"] = { fg = c.orange }
