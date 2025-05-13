@@ -100,6 +100,7 @@ M.on_highlights = function(H, c)
 	H.IlluminatedWordRead = { bg = darker_grey, underline = true }
 	H.IlluminatedWordWrite = { bg = darker_grey, underline = true }
 	H.IlluminatedWordText = { bg = darker_grey, underline = true }
+	H.LspInlayHint = { bg = bg, fg = "#545c7e" }
 
 	--SECTION: language
 
@@ -111,7 +112,8 @@ M.on_highlights = function(H, c)
 	H.Repeat = H.Keyword
 
 	--comments
-	H.Comment = { fg = fg_dark, italic = false }
+	-- H.Comment = { fg = fg_dark, italic = false }
+	H.Comment = { fg = util.blend("#545c7e", 0.5, fg_dark), italic = false }
 
 	-- string & constants
 	-- H.String = { fg = util.blend(light_blue, 0.6, fg) }

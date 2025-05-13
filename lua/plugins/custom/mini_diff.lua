@@ -6,7 +6,7 @@ return {
 			local diff = require("mini.diff")
 			diff.setup({
 				-- Disabled by default
-				source = diff.gen_source.save(),
+				-- source = diff.gen_source.save(),
 			})
 
 			local diff_icon = { icon = " ", color = "blue" }
