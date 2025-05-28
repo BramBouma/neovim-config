@@ -6,7 +6,7 @@ return {
 			delay = 100, -- Delay before highlighting
 			under_cursor = true,
 			providers = {
-				-- "lsp",
+				"lsp",
 				"treesitter",
 				"regex",
 			},
