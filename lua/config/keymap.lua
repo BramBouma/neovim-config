@@ -64,13 +64,7 @@ if plugin_toggles.codecompanion or plugin_toggles.copilot then
 	})
 end
 
---[[
-SECTION: TEMP
---]]
-vim.keymap.set("n", "<leader>hd", "<cmd>colorscheme github_dark_default<CR>", { desc = "swap to github dark" })
-vim.keymap.set("n", "<leader>hn", "<cmd>colorscheme tokyonight<CR>", { desc = "swap to tokyonight" })
-vim.keymap.set("n", "<leader>hs", "<cmd>Telescope colorscheme<CR>", { desc = "search colorschemes" })
-vim.keymap.set("n", "<leader>hk", "<cmd>colorscheme kanagawa-dragon<CR>", { desc = "swap to kanagawa" })
+-- show highlight group under cursor
 local show_hlgroup = function ()
 	local result = vim.treesitter.get_captures_at_cursor(0)
 	print(vim.inspect(result))

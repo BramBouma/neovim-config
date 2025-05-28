@@ -1,6 +1,8 @@
--- nvim v0.8.0
+local plugin_toggle = require("utils.plugin_toggles")
+
 return {
 	"kdheepak/lazygit.nvim",
+	enabled = plugin_toggle.lazygit,
 	lazy = true,
 	-- event = { "VeryLazy" },
 	cmd = {
