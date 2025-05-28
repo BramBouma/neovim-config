@@ -71,6 +71,14 @@ local show_hlgroup = function ()
 end
 vim.keymap.set("n", "<leader>hh", show_hlgroup, { desc = "show hi group" })
 
+vim.keymap.set("n", "<leader>qd", function()
+    vim.diagnostic.setqflist({
+        open = true,
+        title = "Diagnostics",
+        severity = {min = vim.diagnostic.severity.HINT}
+    })
+end, {desc = "populate quickfix with diagnostics"})
+
 
 -- Swap colon functionality with semicolon
 vim.keymap.set({ "n", "v" }, ";", ":", { noremap = true })

@@ -225,7 +225,11 @@ return {
 				zls = {},
 				marksman = {},
 				powershell_es = {},
-				jsonls = {},
+				jsonls = {
+					-- settings = {
+					--
+					-- }
+				},
 				texlab = {},
 				sqlls = {},
 				ts_ls = {},

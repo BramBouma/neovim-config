@@ -16,7 +16,15 @@ local forest = "#064023"
 local blue1 = "#89aebc"
 local orange = "#d29922"
 
-local bg = "#0d1117"
+local bg_main = "#0d1117"
+local bg_alt = "#1d2232"
+local bg_choice = "alt"
+
+if bg_choice == "alt" then
+	bg = bg_alt
+else
+	bg = bg_main
+end
 -- local bg = "#19191e"
 local bg_dark = "#0b0f14"
 local bg_dark1 = "#08090c"

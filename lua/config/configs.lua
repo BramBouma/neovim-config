@@ -69,3 +69,4 @@ vim.opt.scrolloff = 10
 
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])
+-- vim.o.showmatch = true
