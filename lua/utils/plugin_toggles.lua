@@ -1,4 +1,4 @@
--- contral config to enable/disable plugins
+-- central config to enable/disable plugins
 
 return {
 	cmp = true,
@@ -17,6 +17,7 @@ return {
 	indent_line = false,
 	lint = true,
 	neo_tree = true,
+	debug = false,
 
 	-- Custom Plugins
 	alpha = true, -- Dashboard
@@ -28,7 +29,7 @@ return {
 	copilot = false, -- Github Copilot
 	iconpicker = true, -- Icon picker
 	illuminate = true, -- Word highlighting
-	lazygit = true, -- Lazygit integration
+	lazygit = false, -- Lazygit integration
 	markdown_preview = true, -- Markdown preview
 	mini_diff = true, -- Inline diff
 	multicursor = true, -- Multi-cursor support

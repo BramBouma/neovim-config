@@ -64,6 +64,7 @@ if plugin_toggles.codecompanion or plugin_toggles.copilot then
 	})
 end
 
+<<<<<<< HEAD
 --[[
 SECTION: TEMP
 --]]
@@ -73,6 +74,10 @@ vim.keymap.set("n", "<leader>hs", "<cmd>Telescope colorscheme<CR>", { desc = "se
 vim.keymap.set("n", "<leader>hk", "<cmd>colorscheme kanagawa-dragon<CR>", { desc = "swap to kanagawa" })
 
 local show_hlgroup = function()
+=======
+-- show highlight group under cursor
+local show_hlgroup = function ()
+>>>>>>> 8dbbfbfd624c4f88d769b43f612a3251ab324bf2
 	local result = vim.treesitter.get_captures_at_cursor(0)
 	print(vim.inspect(result))
 end
