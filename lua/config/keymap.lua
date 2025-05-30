@@ -25,10 +25,10 @@ SECTION: KEYMAPS FROM KICKSTART
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 --  Use CTRL+<hjkl> to switch between windows
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<C-M-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-M-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-M-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-M-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 --  Use CTRL+<hjkl> to switch between windows
 vim.keymap.set("n", "<M-h>", "<C-w><", { desc = "Decrease window width" })
 vim.keymap.set("n", "<M-l>", "<C-w>>", { desc = "Increase window width" })
@@ -71,37 +71,42 @@ vim.keymap.set("n", "<leader>hd", "<cmd>colorscheme github_dark_default<CR>", { 
 vim.keymap.set("n", "<leader>hn", "<cmd>colorscheme tokyonight<CR>", { desc = "swap to tokyonight" })
 vim.keymap.set("n", "<leader>hs", "<cmd>Telescope colorscheme<CR>", { desc = "search colorschemes" })
 vim.keymap.set("n", "<leader>hk", "<cmd>colorscheme kanagawa-dragon<CR>", { desc = "swap to kanagawa" })
-local show_hlgroup = function ()
+
+local show_hlgroup = function()
 	local result = vim.treesitter.get_captures_at_cursor(0)
 	print(vim.inspect(result))
 end
 vim.keymap.set("n", "<leader>hh", show_hlgroup, { desc = "show hi group" })
 
 vim.keymap.set("n", "<leader>qd", function()
-    vim.diagnostic.setqflist({
-        open = true,
-        title = "Diagnostics",
-        severity = {min = vim.diagnostic.severity.HINT}
-    })
-end, {desc = "populate quickfix with diagnostics"})
-
+	vim.diagnostic.setqflist({
+		open = true,
+		title = "Diagnostics",
+		severity = { min = vim.diagnostic.severity.HINT },
+	})
+end, { desc = "populate quickfix with diagnostics" })
 
 -- Swap colon functionality with semicolon
 vim.keymap.set({ "n", "v" }, ";", ":", { noremap = true })
 vim.keymap.set({ "n", "v" }, ":", ";", { noremap = true })
+
 -- map to get to neotree current view
 vim.keymap.set("n", "<leader>ht", "<cmd>Neotree position=current<CR>", { desc = "open neomap in netrw view" })
+
 -- map to get to Lazy / Mason menus
 vim.keymap.set("n", "<leader>hl", "<cmd>Lazy<CR>", { desc = "[L]azy" })
 vim.keymap.set("n", "<leader>hm", "<cmd>Mason<CR>", { desc = "[M]ason" })
+
 -- map ctrl+a to select all
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all in visual mode from normal mode" })
 vim.keymap.set("v", "<C-a>", "vggVG", { desc = "Select all in visual mode from visual mode" })
 
 -- new line below but remain in normal mode at same loc
 add("<leader>el", "mzo<Esc>`z", "New line below", { "n" }, { icon = "↓ ", color = "blue" })
+
 -- new line above but remain in normal mode at same loc
 add("<leader>ea", "mzO<Esc>`z", "New line above", { "n" }, { icon = "↑ ", color = "blue" })
+
 -- duplicate line below
 add("<leader>ed", "yyp", "Duplicate line below", { "n" }, { icon = "󰆏 ", color = "blue" })
 

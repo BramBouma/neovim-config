@@ -49,9 +49,10 @@ return {
 				desc = "Delete current buffer",
 			},
 			{ "<leader>bl", "<cmd>BufferLineCloseLeft<cr>", desc = "Close buffers to the left" },
-			{ "<leader>bn", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
-			{ "<leader>bo", "<cmd>BufferLinePick<cr>", desc = "Select a buffer to open" },
-			{ "<leader>bp", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer" },
+			-- { "<leader>bn", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
+			{ "<C-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
+			-- { "<leader>bp", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer" },
+			{ "<C-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer" },
 			{ "<leader>br", "<cmd>BufferLineCloseRight<cr>", desc = "Close buffers to the right" },
 			{ "<leader>bg", "<cmd>BufferLinePick<cr>", desc = "Go to buffer with pick" },
 		})

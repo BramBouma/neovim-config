@@ -1,5 +1,14 @@
 local M = {}
 local util = require("tokyonight.util")
+local fn = vim.fn
+
+local ok, cfg = pcall(function()
+	local file = fn.stdpath("config") .. "/lua/theme/color_config.json"
+	return vim.fn.json_decode(fn.readfile(file))
+end)
+
+local variant = (ok and cfg and cfg.scheme) or "main"
+-- local variant = "main"
 
 -- pallette
 local true_blue = "#193296"
@@ -18,19 +27,29 @@ local orange = "#d29922"
 
 local bg_main = "#0d1117"
 local bg_alt = "#1d2232"
-local bg_choice = "alt"
 
-if bg_choice == "alt" then
-	bg = bg_alt
-else
-	bg = bg_main
-end
 -- local bg = "#19191e"
-local bg_dark = "#0b0f14"
+local bg_main_dark = "#0b0f14"
+local bg_alt_dark = "#151925"
+
 local bg_dark1 = "#08090c"
+local bg_alt_dark1 = "#08090c"
+
 local bg_highlight = darker_grey
 local bg_visual = "#264f78"
 local fg = "#e6edf3"
+
+if variant == "alt" then
+	bg = bg_alt
+	bg_dark = bg_alt_dark
+elseif variant == "main" then
+	bg = bg_main
+	bg_dark = bg_main_dark
+else
+	print("No valid colorscheme provided, check color_config.json")
+	error("no valid colorscheme provided")
+end
+
 local fg_dark = med_grey
 
 local border = bg_dark1
