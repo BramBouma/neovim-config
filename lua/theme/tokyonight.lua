@@ -30,10 +30,10 @@ local bg_alt = "#1d2232"
 
 -- local bg = "#19191e"
 local bg_main_dark = "#0b0f14"
-local bg_alt_dark = "#151925"
+local bg_alt_dark = "#1b202f"
 
-local bg_dark1 = "#08090c"
-local bg_alt_dark1 = "#08090c"
+local bg_main_dark1 = "#08090c"
+local bg_alt_dark1 = "#181a27"
 
 local bg_highlight = darker_grey
 local bg_visual = "#264f78"
@@ -42,9 +42,11 @@ local fg = "#e6edf3"
 if variant == "alt" then
 	bg = bg_alt
 	bg_dark = bg_alt_dark
+	bg_dark1 = bg_alt_dark1
 elseif variant == "main" then
 	bg = bg_main
 	bg_dark = bg_main_dark
+	bg_dark1 = bg_main_dark1
 else
 	print("No valid colorscheme provided, check color_config.json")
 	error("no valid colorscheme provided")
@@ -120,6 +122,9 @@ M.on_highlights = function(H, c)
 
 	-- bufferline
 	H.BufferLineIndicatorSelected = { fg = c.fg_gutter }
+	-- H.BufferOffset = { bg = bg_dark }
+	-- H.BufferTabpageFill = { bg = bg_dark }
+	H.BufferVisible = { bg = bg_dark }
 
 	--SECTION: ui
 	H.CursorLineNr = { fg = fg }
