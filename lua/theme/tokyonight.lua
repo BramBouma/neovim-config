@@ -64,6 +64,7 @@ M.on_colors = function(c, transparent)
 	--SECTION: backgrounds
 	c.bg = bg
 	c.bg_dark = transparent and c.none or bg_dark
+	c.bg_dark1 = bg_dark1
 	c.bg_float = transparent and c.none or bg
 	c.bg_highlight = bg_highlight
 	c.bg_popup = bg
@@ -81,6 +82,7 @@ M.on_colors = function(c, transparent)
 
 	--SECTION: ui
 	c.border = border or c.none
+	c.border_highlight = fg_dark
 	c.hint = c.blue
 
 	--SECTION: git
@@ -124,7 +126,8 @@ M.on_highlights = function(H, c)
 	H.BufferLineIndicatorSelected = { fg = c.fg_gutter }
 	-- H.BufferOffset = { bg = bg_dark }
 	-- H.BufferTabpageFill = { bg = bg_dark }
-	H.BufferVisible = { bg = bg_dark }
+	-- H.BufferVisible = { bg = bg_dark }
+	H.BufferOffset = { bg = bg }
 
 	--SECTION: ui
 	H.CursorLineNr = { fg = fg }

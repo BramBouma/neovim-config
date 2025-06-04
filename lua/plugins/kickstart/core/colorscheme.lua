@@ -45,13 +45,10 @@ return {
 		lazy = true,
 		event = "VeryLazy",
 		config = function()
-
 			local wk = require("which-key")
 			wk.add({
-				{"<leader>tv", "<cmd>colorscheme vscode<CR>", { desc = "set theme to vscode" } }
+				{ "<leader>tv", "<cmd>colorscheme vscode<CR>", { desc = "set theme to vscode" } },
 			})
-
-
 		end,
 	},
 	{
@@ -65,7 +62,7 @@ return {
 
 			local wk = require("which-key")
 			wk.add({
-				{"<leader>tg", "<cmd>colorscheme github_dark_default<CR>", { desc = "set theme to github dark" } }
+				{ "<leader>tg", "<cmd>colorscheme github_dark_default<CR>", { desc = "set theme to github dark" } },
 			})
 		end,
 	},
@@ -80,7 +77,7 @@ return {
 
 			local wk = require("which-key")
 			wk.add({
-				{"<leader>tk", "<cmd>colorscheme kanagawa-dragon<CR>", { desc = "set theme to kanagawa"}}
+				{ "<leader>tk", "<cmd>colorscheme kanagawa-dragon<CR>", { desc = "set theme to kanagawa" } },
 			})
 		end,
 	},

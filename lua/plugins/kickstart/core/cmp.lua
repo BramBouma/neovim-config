@@ -89,10 +89,10 @@ return {
 							}
 							vim_item.menu = "[" .. (source_map[source_name] or source_name) .. "]"
 							-- Optional: Add extra highlighting for Copilot suggestions
-								if entry.source.name == "copilot" then
-									vim_item.kind = " " .. vim_item.kind -- Add GitHub icon (requires nerd font)
-								end
-								return vim_item
+							if entry.source.name == "copilot" then
+								vim_item.kind = " " .. vim_item.kind -- Add GitHub icon (requires nerd font)
+							end
+							return vim_item
 						end,
 					}),
 				},
@@ -115,7 +115,7 @@ return {
 
 					-- If you prefer more traditional completion keymaps,
 					-- you can uncomment the following lines
-					['<CR>'] = cmp.mapping.confirm { select = true },
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
 					-- ['<Tab>'] = cmp.mapping.confirm { select = true },
 					-- ['<Tab>'] = cmp.mapping.select_next_item(),
 					--['<S-Tab>'] = cmp.mapping.select_prev_item(),
@@ -158,6 +158,11 @@ return {
 					{ name = "lazydev", group_index = 0 },
 					{ name = "buffer", keyword_length = 3 },
 					{ name = "path" },
+				},
+
+				window = {
+					completion = cmp.config.window.bordered(),
+					documentation = cmp.config.window.bordered(),
 				},
 			})
 
