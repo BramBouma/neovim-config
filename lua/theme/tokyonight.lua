@@ -97,7 +97,8 @@ M.on_highlights = function(H, c)
 	H.IblScope = { fg = util.blend(fg, 0.5, fg_dark) }
 
 	--SECTION: indent blankline
-	H.SnacksIndentScope = { fg = util.blend(fg, 0.5, fg_dark) }
+	H.SnacksIndentScope = { fg = util.blend(fg, 0.5, bg) }
+	H.SnacksIndent = { fg = util.blend(fg_dark, 0.3, bg) }
 
 	--SECTION: status line
 	H.MiniStatuslineModeNormal = { bg = true_blue, fg = fg }
@@ -194,5 +195,9 @@ M.on_highlights = function(H, c)
 	H["@lsp.type.variable"] = H["@variable"]
 	H["@module"] = { fg = fg }
 end
+
+M.table = {
+	table_bg = bg,
+}
 
 return M

@@ -37,6 +37,19 @@ return {
 				{ "<leader>ts", "<cmd>Telescope colorscheme<CR>", { desc = "search through colorschemes" } },
 			})
 			vim.cmd.hi("Search guibg=#ff7b72 guifg=#000000")
+
+			-- require("bufferline").setup({
+			-- 	highlights = {
+			-- 		fill = {
+			-- 			bg = theme.table.table_bg,
+			-- 			fg = theme.table.table_bg,
+			-- 		},
+			-- 		background = {
+			-- 			bg = theme.table.table_bg,
+			-- 			fg = theme.table.table_bg,
+			-- 		},
+			-- 	},
+			-- })
 		end,
 	},
 	-- SECTION: extra colorschemes cuz why not

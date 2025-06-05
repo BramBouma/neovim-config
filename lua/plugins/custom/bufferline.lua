@@ -34,8 +34,9 @@ return {
 				},
 				separator_style = "thin",
 				indicator = {
-					style = "underline",
+					style = "none",
 				},
+				style_preset = require("bufferline").style_preset.no_italic,
 			},
 		})
 		require("which-key").add({

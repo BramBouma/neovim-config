@@ -13,10 +13,6 @@ return {
 				"json",
 			},
 		},
-
-		-- config = function()
-		-- 	-- vim.cmd("ColorizerToggle")
-		-- end,
 	},
 	{
 
