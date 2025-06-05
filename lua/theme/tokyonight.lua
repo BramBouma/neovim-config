@@ -12,7 +12,7 @@ local variant = (ok and cfg and cfg.scheme) or "main"
 
 -- pallette
 local true_blue = "#193296"
-local red_pale = "#d16969"
+-- local red_pale = "#d16969"
 local true_red = "#e84525"
 local red = "#ff7b72"
 local med_grey = "#999999"
@@ -40,13 +40,13 @@ local bg_visual = "#264f78"
 local fg = "#e6edf3"
 
 if variant == "alt" then
-	bg = bg_alt
-	bg_dark = bg_alt_dark
-	bg_dark1 = bg_alt_dark1
+	BG = bg_alt
+	BG_DARK = bg_alt_dark
+	BG_DARK1 = bg_alt_dark1
 elseif variant == "main" then
-	bg = bg_main
-	bg_dark = bg_main_dark
-	bg_dark1 = bg_main_dark1
+	BG = bg_main
+	BG_DARK = bg_main_dark
+	BG_DARK1 = bg_main_dark1
 else
 	print("No valid colorscheme provided, check color_config.json")
 	error("no valid colorscheme provided")
@@ -54,7 +54,7 @@ end
 
 local fg_dark = med_grey
 
-local border = bg_dark1
+local border = BG_DARK1
 
 local git_add = util.blend(green, 0.7, fg_dark)
 local git_change = util.blend(orange, 0.7, fg_dark)
@@ -62,13 +62,13 @@ local git_delete = util.blend(true_red, 0.7, fg_dark)
 
 M.on_colors = function(c, transparent)
 	--SECTION: backgrounds
-	c.bg = bg
-	c.bg_dark = transparent and c.none or bg_dark
-	c.bg_dark1 = bg_dark1
-	c.bg_float = transparent and c.none or bg
+	c.bg = BG
+	c.bg_dark = transparent and c.none or BG_DARK
+	c.bg_dark1 = BG_DARK1
+	c.bg_float = transparent and c.none or BG
 	c.bg_highlight = bg_highlight
-	c.bg_popup = bg
-	c.bg_sidebar = transparent and c.none or bg
+	c.bg_popup = BG
+	c.bg_sidebar = transparent and c.none or BG
 	c.bg_visual = bg_visual
 
 	--SECTION: foregrounds
@@ -76,7 +76,7 @@ M.on_colors = function(c, transparent)
 	c.fg_float = fg
 	c.fg_dark = fg_dark
 	c.fg_sidebar = fg
-	c.fg_gutter = util.blend(fg_dark, 0.5, bg)
+	c.fg_gutter = util.blend(fg_dark, 0.5, BG)
 	c.green1 = green1
 	c.info = blue1
 
@@ -93,12 +93,12 @@ end
 
 M.on_highlights = function(H, c)
 	--SECTION: indent blankline
-	H.IblIndent = { fg = util.blend(fg_dark, 0.5, bg) }
+	H.IblIndent = { fg = util.blend(fg_dark, 0.5, BG) }
 	H.IblScope = { fg = util.blend(fg, 0.5, fg_dark) }
 
 	--SECTION: indent blankline
-	H.SnacksIndentScope = { fg = util.blend(fg, 0.5, bg) }
-	H.SnacksIndent = { fg = util.blend(fg_dark, 0.3, bg) }
+	H.SnacksIndentScope = { fg = util.blend(fg, 0.5, BG) }
+	H.SnacksIndent = { fg = util.blend(fg_dark, 0.3, BG) }
 
 	--SECTION: status line
 	H.MiniStatuslineModeNormal = { bg = true_blue, fg = fg }
@@ -106,7 +106,7 @@ M.on_highlights = function(H, c)
 	H.MiniStatuslineModeCommand = { bg = true_red, fg = fg }
 	H.MiniStatuslineDevinfo = { bg = dark_grey, fg = fg }
 	H.MiniStatuslineFileinfo = { bg = dark_grey, fg = fg }
-	H.MiniStatuslineFilename = { bg = util.blend(dark_grey, 0.4, bg), fg = fg }
+	H.MiniStatuslineFilename = { bg = util.blend(dark_grey, 0.4, BG), fg = fg }
 
 	--SECTION: plugin ui
 
@@ -116,8 +116,8 @@ M.on_highlights = function(H, c)
 	H.AlphaButtons = { fg = fg }
 
 	-- telescope
-	H.TelescopeBorder = { fg = fg_dark, bg = bg }
-	H.TelescopePromptBorder = { fg = true_red, bg = bg }
+	H.TelescopeBorder = { fg = fg_dark, bg = BG }
+	H.TelescopePromptBorder = { fg = true_red, bg = BG }
 	H.TelescopePromptTitle = H.TelescopePromptBorder
 
 	-- whichkey
@@ -125,18 +125,21 @@ M.on_highlights = function(H, c)
 
 	-- bufferline
 	H.BufferLineIndicatorSelected = { fg = c.fg_gutter }
-	-- H.BufferOffset = { bg = bg_dark }
-	-- H.BufferTabpageFill = { bg = bg_dark }
-	-- H.BufferVisible = { bg = bg_dark }
-	H.BufferOffset = { bg = bg }
+	-- H.BufferOffset = { bg = BG_DARK }
+	-- H.BufferTabpageFill = { bg = BG_DARK }
+	-- H.BufferVisible = { bg = BG_DARK }
+	-- H.BufferOffset = { bg = bg }
+	-- H.TabLineFill = { bg = bg }
+	-- H.MiniTabLineFill = { bg = bg }
+	-- H.TabLine = { bg = bg }
 
 	--SECTION: ui
 	H.CursorLineNr = { fg = fg }
-	H.TreesitterContext = { bg = bg }
+	H.TreesitterContext = { bg = BG }
 	H.IlluminatedWordRead = { bg = darker_grey, underline = true }
 	H.IlluminatedWordWrite = { bg = darker_grey, underline = true }
 	H.IlluminatedWordText = { bg = darker_grey, underline = true }
-	H.LspInlayHint = { bg = bg, fg = "#545c7e" }
+	H.LspInlayHint = { bg = BG, fg = "#545c7e" }
 
 	--SECTION: language
 
@@ -197,7 +200,7 @@ M.on_highlights = function(H, c)
 end
 
 M.table = {
-	table_bg = bg,
+	table_bg = BG,
 }
 
 return M

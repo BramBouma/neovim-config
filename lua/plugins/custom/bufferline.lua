@@ -32,7 +32,7 @@ return {
 						text_align = "center",
 					},
 				},
-				separator_style = "thin",
+				separator_style = { "", "" },
 				indicator = {
 					style = "none",
 				},
