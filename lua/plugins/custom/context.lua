@@ -11,6 +11,7 @@ return {
 			max_lines = 0, -- 0 means no max
 			trim_scope = "outer", -- Keeps outermost scope only
 			mode = "topline",
+			-- separator = "",
 		})
 	end,
 }

@@ -70,3 +70,6 @@ vim.opt.scrolloff = 10
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])
 -- vim.o.showmatch = true
+--
+vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
+vim.cmd("hi TreesitterContextLineNumberBottom gui=underline guisp=Grey")

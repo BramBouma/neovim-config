@@ -131,7 +131,7 @@ M.on_highlights = function(H, c)
 
 	--SECTION: ui
 	H.CursorLineNr = { fg = fg }
-	H.TreesitterContext = { bg = util.blend(bg_dark1, 0.95, fg) }
+	H.TreesitterContext = { bg = bg }
 	H.IlluminatedWordRead = { bg = darker_grey, underline = true }
 	H.IlluminatedWordWrite = { bg = darker_grey, underline = true }
 	H.IlluminatedWordText = { bg = darker_grey, underline = true }

@@ -25,15 +25,15 @@ SECTION: KEYMAPS FROM KICKSTART
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 --  Use CTRL+<hjkl> to switch between windows
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<C-M-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-M-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-M-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-M-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<M-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<M-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<M-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<M-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 --  Use CTRL+<hjkl> to switch between windows
-vim.keymap.set("n", "<M-h>", "<C-w><", { desc = "Decrease window width" })
-vim.keymap.set("n", "<M-l>", "<C-w>>", { desc = "Increase window width" })
-vim.keymap.set("n", "<M-j>", "<C-w>+", { desc = "Increase window height" })
-vim.keymap.set("n", "<M-k>", "<C-w>-", { desc = "Decrease window height" })
+vim.keymap.set("n", "<C-M-h>", "<C-w><", { desc = "Decrease window width" })
+vim.keymap.set("n", "<C-M-l>", "<C-w>>", { desc = "Increase window width" })
+vim.keymap.set("n", "<C-M-j>", "<C-w>+", { desc = "Increase window height" })
+vim.keymap.set("n", "<C-M-k>", "<C-w>-", { desc = "Decrease window height" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
