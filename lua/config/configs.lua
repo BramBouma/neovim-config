@@ -65,11 +65,14 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
 
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])
 -- vim.o.showmatch = true
 --
-vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
-vim.cmd("hi TreesitterContextLineNumberBottom gui=underline guisp=Grey")
+local theme = require("theme.tokyonight")
+-- vim.cmd("hi TreesitterContextBottom gui=underline guisp=Gray")
+-- vim.cmd("hi TreesitterContextLineNumberBottom gui=underline guisp=Gray")
+vim.cmd("hi TreesitterContextBottom gui=underline guisp=" .. theme.table.table_context_border)
+vim.cmd("hi TreesitterContextLineNumberBottom gui=underline guisp=" .. theme.table.table_context_border)

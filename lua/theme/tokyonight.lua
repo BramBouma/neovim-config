@@ -1,5 +1,5 @@
 local M = {}
-local util = require("tokyonight.util")
+local util = require("utils.util")
 local fn = vim.fn
 
 local ok, cfg = pcall(function()
@@ -53,6 +53,7 @@ else
 end
 
 local fg_dark = med_grey
+local context_border = util.blend(fg_dark, 0.2, BG)
 
 local border = BG_DARK1
 
@@ -126,13 +127,6 @@ M.on_highlights = function(H, c)
 
 	-- bufferline
 	H.BufferLineIndicatorSelected = { fg = c.fg_gutter }
-	-- H.BufferOffset = { bg = BG_DARK }
-	-- H.BufferTabpageFill = { bg = BG_DARK }
-	-- H.BufferVisible = { bg = BG_DARK }
-	-- H.BufferOffset = { bg = bg }
-	-- H.TabLineFill = { bg = bg }
-	-- H.MiniTabLineFill = { bg = bg }
-	-- H.TabLine = { bg = bg }
 
 	--SECTION: ui
 	H.CursorLineNr = { fg = fg }
@@ -150,6 +144,7 @@ M.on_highlights = function(H, c)
 	H.Operator = H.Keyword
 	H.Include = H.Keyword
 	H.Repeat = H.Keyword
+	H.Special = { fg = util.blend(c.purple, 0.75, fg) }
 
 	--comments
 	-- H.Comment = { fg = fg_dark, italic = false }
@@ -180,7 +175,7 @@ M.on_highlights = function(H, c)
 	-- variables & parameters
 	H.Identifier = { fg = c.fg }
 	H["@variable"] = { fg = c.fg }
-	H["@variable.parameter"] = { fg = util.blend(c.purple, 0.6, fg) }
+	H["@variable.parameter"] = { fg = util.blend(c.purple, 0.75, fg) }
 	H["@variable.builtin"] = H["@variable.parameter"]
 
 	-- link treesitter groups
@@ -202,6 +197,7 @@ end
 
 M.table = {
 	table_bg = BG,
+	table_context_border = context_border,
 }
 
 return M
