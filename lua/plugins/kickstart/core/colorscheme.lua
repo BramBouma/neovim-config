@@ -38,19 +38,6 @@ return {
 			})
 			vim.cmd.hi("Search guibg=#ff7b72 guifg=#000000")
 			vim.cmd.hi("BufferLineFill guibg=" .. theme.table.table_bg)
-
-			-- require("bufferline").setup({
-			-- 	highlights = {
-			-- 		fill = {
-			-- 			bg = theme.table.table_bg,
-			-- 			fg = theme.table.table_bg,
-			-- 		},
-			-- 		background = {
-			-- 			bg = theme.table.table_bg,
-			-- 			fg = theme.table.table_bg,
-			-- 		},
-			-- 	},
-			-- })
 		end,
 	},
 	-- SECTION: extra colorschemes cuz why not

@@ -97,7 +97,8 @@ M.on_highlights = function(H, c)
 	H.IblScope = { fg = util.blend(fg, 0.5, fg_dark) }
 
 	--SECTION: indent blankline
-	H.SnacksIndentScope = { fg = util.blend(fg, 0.5, BG) }
+	H.SnacksIndentScope = { fg = util.blend(fg, 0.5, BG), underline = false }
+	H.SnacksIndentScopeUnderLine = { fg = util.blend(fg, 0.5, BG), underline = true, sp = fg }
 	H.SnacksIndent = { fg = util.blend(fg_dark, 0.3, BG) }
 
 	--SECTION: status line

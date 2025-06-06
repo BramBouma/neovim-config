@@ -21,6 +21,9 @@ return {
 
 	-- Custom Plugins
 	alpha = true, -- Dashboard
+	snacks = {
+		indent = true,
+	},
 	bufferline = true, -- Assuming you have this file
 	cellular_automaton = true, -- Example: Disabled
 	codecompanion = true, -- AI companion
