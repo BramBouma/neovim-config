@@ -6,7 +6,8 @@ end
 
 return {
 	"folke/snacks.nvim",
-	---@type snacks.Config
+	event = { "BufReadPre", "BufNewFile" },
+	--	---@type snacks.Config
 	opts = {
 		indent = { priority = 1000, char = "|" },
 		scope = {
@@ -26,6 +27,22 @@ return {
 				vertical = "│",
 				arrow = ">",
 			},
+		},
+	},
+	keys = {
+		{
+			"<leader>.",
+			function()
+				Snacks.scratch()
+			end,
+			desc = "Toggle Scratch Buffer",
+		},
+		{
+			"<leader>S",
+			function()
+				Snacks.scratch.select()
+			end,
+			desc = "Select Scratch Buffer",
 		},
 	},
 }
