@@ -204,42 +204,42 @@ return {
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				clangd = {},
-				gopls = {},
-				-- pyright = {},
-				rust_analyzer = {},
-
-				-- Python
-				pylsp = {
-					settings = {
-						pylsp = {
-							plugins = {
-								pycodestyle = {
-									enabled = true,
-									ignore = { "E501" },
-								},
-								pyflakes = {
-									enabled = false,
-								},
-							},
-						},
-					},
-				},
+				-- clangd = {},
+				-- gopls = {},
+				-- -- pyright = {},
+				-- rust_analyzer = {},
+				--
+				-- -- Python
+				-- pylsp = {
+				-- 	settings = {
+				-- 		pylsp = {
+				-- 			plugins = {
+				-- 				pycodestyle = {
+				-- 					enabled = true,
+				-- 					ignore = { "E501" },
+				-- 				},
+				-- 				pyflakes = {
+				-- 					enabled = false,
+				-- 				},
+				-- 			},
+				-- 		},
+				-- 	},
+				-- },
 				ruff = {},
-
-				zls = {},
-				marksman = {},
-				powershell_es = {},
-				jsonls = {
-					-- settings = {
-					--
-					-- }
-				},
-				texlab = {},
-				sqlls = {},
-				ts_ls = {},
-				html = {},
-				cssls = {},
+				--
+				-- zls = {},
+				-- marksman = {},
+				-- powershell_es = {},
+				-- jsonls = {
+				-- 	-- settings = {
+				-- 	--
+				-- 	-- }
+				-- },
+				-- texlab = {},
+				-- sqlls = {},
+				-- ts_ls = {},
+				-- html = {},
+				-- cssls = {},
 
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--

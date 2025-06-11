@@ -1,5 +1,9 @@
 local diagnostic_icons = require("utils.icons").diagnostic
-print(diagnostic_icons)
+local plugin_toggles = require("utils.plugin_toggles")
+
+if not plugin_toggles.bufferline then
+	return {}
+end
 
 return {
 	"akinsho/bufferline.nvim",

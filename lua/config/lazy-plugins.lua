@@ -8,9 +8,10 @@ require("lazy").setup({
 	require("plugins.kickstart.core.lspconfig"),
 	require("plugins.kickstart.core.conform"),
 	require("plugins.kickstart.core.cmp"),
-	require("plugins.kickstart.core.colorscheme"),
+	require("plugins.kickstart.core.chadui"),
+	-- require("plugins.kickstart.core.colorscheme"),
 	require("plugins.kickstart.core.todo-comments"),
-	require("plugins.kickstart.core.mini"),
+	-- require("plugins.kickstart.core.mini"),
 	require("plugins.kickstart.core.treesitter"),
 
 	-- SECTION: extra plugins from kickstart.nvim
@@ -58,5 +59,8 @@ require("lazy").setup({
 				"tohtml",
 			},
 		},
+	},
+	install = {
+		colorscheme = { "nvchad" },
 	},
 })

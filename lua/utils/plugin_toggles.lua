@@ -24,10 +24,10 @@ return {
 	snacks = {
 		indent = true,
 	},
-	bufferline = true, -- Assuming you have this file
+	bufferline = false, -- Assuming you have this file
 	cellular_automaton = true, -- Example: Disabled
 	codecompanion = true, -- AI companion
-	colorizer = true, -- Color highlighter
+	colorizer = false, -- Color highlighter
 	context = true, -- Code context
 	copilot = false, -- Github Copilot
 	iconpicker = true, -- Icon picker
@@ -42,4 +42,5 @@ return {
 	render_markdown = true, -- Markdown rendering enhancements
 	trouble = true, -- Diagnostics list
 	typr = true, -- Typing practice
+	lualine = false,
 }

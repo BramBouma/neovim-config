@@ -1,5 +1,3 @@
--- Set <space> as the leader key
--- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -13,11 +11,23 @@ require("config.configs")
 -- import autocommands (only one that came with kickstart)
 require("config.autocmds")
 
+-- setup base46
+local cache = vim.fn.stdpath("data") .. "/base46_cache/"
+if vim.fn.isdirectory(cache) == 0 then
+	vim.fn.mkdir(cache, "p")
+end
+vim.g.base46_cache = cache
+
 -- initialize and install lazy as the plugin manager
 require("config.lazy-bootstrap")
 
 -- script using lazy to install plugins
 require("config.lazy-plugins")
+
+-- setup base46 without lazy loading ig?
+for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
+	dofile(vim.g.base46_cache .. "/" .. v)
+end
 
 -- set various keymaps
 require("config.keymap")

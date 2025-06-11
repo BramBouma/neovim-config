@@ -1,3 +1,9 @@
+local plugin_toggles = require("utils.plugin_toggles")
+
+if not plugin_toggles.colorizer then
+	return {}
+end
+
 return {
 	{
 		"NvChad/nvim-colorizer.lua", -- Highlight hex and rgb colors within Neovim
