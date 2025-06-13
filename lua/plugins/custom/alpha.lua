@@ -1,3 +1,10 @@
+local diagnostic_icons = require("utils.icons").diagnostic
+local plugin_toggles = require("utils.plugin_toggles")
+
+if not plugin_toggles.alpha then
+	return {}
+end
+
 -- Start dashboard.
 return {
 	-- 	{
