@@ -32,7 +32,7 @@ return {
 	copilot = false, -- Github Copilot
 	iconpicker = true, -- Icon picker
 	illuminate = true, -- Word highlighting
-	lazygit = false, -- Lazygit integration
+	lazygit = true, -- Lazygit integration
 	markdown_preview = true, -- Markdown preview
 	mini_diff = true, -- Inline diff
 	multicursor = true, -- Multi-cursor support
