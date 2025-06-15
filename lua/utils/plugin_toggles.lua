@@ -42,4 +42,5 @@ return {
 	render_markdown = true, -- Markdown rendering enhancements
 	trouble = true, -- Diagnostics list
 	typr = true, -- Typing practice
+	jq = false,
 }

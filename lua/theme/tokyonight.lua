@@ -131,9 +131,9 @@ M.on_highlights = function(H, c)
 	--SECTION: ui
 	H.CursorLineNr = { fg = fg }
 	H.TreesitterContext = { bg = BG }
-	H.IlluminatedWordRead = { bg = darker_grey, underline = true }
-	H.IlluminatedWordWrite = { bg = darker_grey, underline = true }
-	H.IlluminatedWordText = { bg = darker_grey, underline = true }
+	H.IlluminatedWordRead = { bg = util.blend("#405168", 0.8, BG), underline = true }
+	H.IlluminatedWordWrite = { bg = util.blend("#405168", 0.8, BG), underline = true }
+	H.IlluminatedWordText = { bg = util.blend("#405168", 0.8, BG), underline = true }
 	H.LspInlayHint = { bg = BG, fg = "#545c7e" }
 
 	--SECTION: language
