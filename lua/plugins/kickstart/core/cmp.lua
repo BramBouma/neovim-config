@@ -86,6 +86,7 @@ return {
 								codecompanion = "Companion",
 								lazydev = "LazyDev",
 								copilot = "Copilot",
+								supermaven = "Supermaven",
 							}
 							vim_item.menu = "[" .. (source_map[source_name] or source_name) .. "]"
 							-- Optional: Add extra highlighting for Copilot suggestions
@@ -154,6 +155,7 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "copilot" },
 					{ name = "codecompanion" },
+					{ name = "supermaven" },
 					{ name = "luasnip" },
 					{ name = "lazydev", group_index = 0 },
 					{ name = "buffer", keyword_length = 3 },

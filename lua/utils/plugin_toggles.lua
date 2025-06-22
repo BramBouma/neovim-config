@@ -26,10 +26,11 @@ return {
 	},
 	bufferline = true, -- Assuming you have this file
 	cellular_automaton = true, -- Example: Disabled
-	codecompanion = true, -- AI companion
+	codecompanion = false, -- AI companion
 	colorizer = true, -- Color highlighter
 	context = true, -- Code context
 	copilot = false, -- Github Copilot
+	supermaven = true,
 	iconpicker = true, -- Icon picker
 	illuminate = true, -- Word highlighting
 	lazygit = true, -- Lazygit integration
