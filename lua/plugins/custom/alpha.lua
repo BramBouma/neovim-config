@@ -80,7 +80,7 @@ return {
 
 			-- AI status
 			local plugin_toggles = require("utils.plugin_toggles")
-			local ai_enabled = plugin_toggles.copilot or plugin_toggles.codecompanion
+			local ai_enabled = plugin_toggles.copilot or plugin_toggles.codecompanion or plugin_toggles.supermaven
 			local ai_status = ai_enabled and "AI: Enabled ✅" or "AI: Disabled ❌"
 
 			dashboard.section.footer.val = string.format(
