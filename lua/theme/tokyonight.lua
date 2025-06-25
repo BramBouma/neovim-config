@@ -7,7 +7,9 @@ local ok, cfg = pcall(function()
 	return vim.fn.json_decode(fn.readfile(file))
 end)
 
-local variant = (ok and cfg and cfg.scheme) or "main"
+-- local variant = (ok and cfg and cfg.scheme) or "main"
+local variant = "grey"
+
 -- local variant = "main"
 
 -- pallette
@@ -27,15 +29,17 @@ local blue1 = "#89aebc"
 local orange = "#d29922"
 
 local bg_main = "#0d1117"
--- local bg_alt = "#1d2232"
-local bg_alt = "#282c33"
+local bg_alt = "#1d2232"
+local bg_grey = "#282c33"
 
 -- local bg = "#19191e"
 local bg_main_dark = "#0b0f14"
 local bg_alt_dark = "#1b202f"
+local bg_grey_dark = util.adjust_lightness(bg_grey, -0.2)
 
 local bg_main_dark1 = "#08090c"
 local bg_alt_dark1 = "#181a27"
+local bg_grey_dark1 = util.adjust_lightness(bg_grey, -0.4)
 
 local bg_highlight = darker_grey
 local bg_visual = "#264f78"
@@ -49,6 +53,10 @@ elseif variant == "main" then
 	BG = bg_main
 	BG_DARK = bg_main_dark
 	BG_DARK1 = bg_main_dark1
+elseif variant == "grey" then
+	BG = bg_grey
+	BG_DARK = bg_grey_dark
+	BG_DARK1 = bg_grey_dark1
 else
 	print("No valid colorscheme provided, check color_config.json")
 	error("no valid colorscheme provided")
@@ -137,6 +145,7 @@ M.on_highlights = function(H, c)
 	H.IlluminatedWordWrite = { bg = util.blend("#405168", 0.8, BG), underline = true }
 	H.IlluminatedWordText = { bg = util.blend("#405168", 0.8, BG), underline = true }
 	H.LspInlayHint = { bg = BG, fg = "#545c7e" }
+	H.CursorLine = { bg = util.adjust_lightness(BG, 0.1) }
 
 	--SECTION: language
 
