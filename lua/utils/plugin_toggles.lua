@@ -26,7 +26,7 @@ return {
 	},
 	bufferline = false, -- Assuming you have this file
 	cellular_automaton = true, -- Example: Disabled
-	codecompanion = true, -- AI companion
+	codecompanion = false, -- AI companion
 	colorizer = false, -- Color highlighter
 	context = true, -- Code context
 	copilot = false, -- Github Copilot
