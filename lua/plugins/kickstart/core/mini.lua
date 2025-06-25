@@ -1,3 +1,8 @@
+local plugin_toggles = require("utils.plugin_toggles")
+
+if not plugin_toggles.mini then
+	return {}
+end
 -- Collection of various small independent plugins/modules
 return {
 	"echasnovski/mini.nvim",

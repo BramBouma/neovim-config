@@ -11,7 +11,7 @@ require("lazy").setup({
 	require("plugins.kickstart.core.chadui"),
 	-- require("plugins.kickstart.core.colorscheme"),
 	require("plugins.kickstart.core.todo-comments"),
-	-- require("plugins.kickstart.core.mini"),
+	require("plugins.kickstart.core.mini"),
 	require("plugins.kickstart.core.treesitter"),
 
 	-- SECTION: extra plugins from kickstart.nvim
