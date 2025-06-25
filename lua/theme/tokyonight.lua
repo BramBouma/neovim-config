@@ -14,7 +14,8 @@ local variant = (ok and cfg and cfg.scheme) or "main"
 local true_blue = "#193296"
 -- local red_pale = "#d16969"
 local true_red = "#e84525"
-local red = "#ff7b72"
+local red = "#ff5a4f"
+-- local red = "#ff7b72"
 local med_grey = "#999999"
 local dark_grey = "#484f58"
 local darker_grey = "#222D3D"
@@ -26,7 +27,8 @@ local blue1 = "#89aebc"
 local orange = "#d29922"
 
 local bg_main = "#0d1117"
-local bg_alt = "#1d2232"
+-- local bg_alt = "#1d2232"
+local bg_alt = "#282c33"
 
 -- local bg = "#19191e"
 local bg_main_dark = "#0b0f14"
@@ -168,7 +170,8 @@ M.on_highlights = function(H, c)
 	H["@method.call"] = { link = "Function" }
 
 	-- types & constructors
-	H.Type = { fg = util.blend(c.purple, 0.7, fg), bold = true }
+	-- H.Type = { fg = util.blend(c.purple, 0.7, fg), bold = true }
+	H.Type = { fg = c.orange }
 	H["@constructor"] = { link = "Type" }
 	H["@type.builtin"] = { link = "Type" }
 
