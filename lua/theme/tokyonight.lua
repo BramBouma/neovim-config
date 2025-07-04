@@ -138,6 +138,11 @@ M.on_highlights = function(H, c)
 	-- bufferline
 	H.BufferLineIndicatorSelected = { fg = c.fg_gutter }
 
+	-- diff
+	H.DiffAdd = { bg = util.blend(git_add, 0.25, BG) }
+	H.DiffChange = { bg = util.blend(git_change, 0.25, BG) }
+	H.DiffDelete = { bg = util.blend(git_delete, 0.25, BG) }
+
 	--SECTION: ui
 	H.CursorLineNr = { fg = fg }
 	H.TreesitterContext = { bg = BG }
