@@ -216,7 +216,9 @@ return {
 							plugins = {
 								pycodestyle = {
 									enabled = true,
-									ignore = { "E501" },
+									ignore = {
+										"E501",
+									},
 								},
 								pyflakes = {
 									enabled = false,
