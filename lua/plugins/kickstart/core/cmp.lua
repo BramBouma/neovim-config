@@ -116,7 +116,16 @@ return {
 
 					-- If you prefer more traditional completion keymaps,
 					-- you can uncomment the following lines
-					["<CR>"] = cmp.mapping.confirm({ select = true }),
+
+					["<Tab>"] = cmp.mapping(function(fallback)
+						if cmp.visible() then
+							cmp.confirm({ select = true })
+						else
+							fallback()
+						end
+					end, { "i", "s" }),
+
+					-- ["<CR>"] = cmp.mapping.confirm({ select = true }),
 					-- ['<Tab>'] = cmp.mapping.confirm { select = true },
 					-- ['<Tab>'] = cmp.mapping.select_next_item(),
 					--['<S-Tab>'] = cmp.mapping.select_prev_item(),

@@ -220,23 +220,23 @@ return {
 						},
 					},
 				},
-				pylsp = {
-					settings = {
-						pylsp = {
-							plugins = {
-								pycodestyle = {
-									enabled = true,
-									ignore = {
-										"E501",
-									},
-								},
-								pyflakes = {
-									enabled = false,
-								},
-							},
-						},
-					},
-				},
+				-- pylsp = {
+				-- 	settings = {
+				-- 		pylsp = {
+				-- 			plugins = {
+				-- 				pycodestyle = {
+				-- 					enabled = true,
+				-- 					ignore = {
+				-- 						"E501",
+				-- 					},
+				-- 				},
+				-- 				pyflakes = {
+				-- 					enabled = false,
+				-- 				},
+				-- 			},
+				-- 		},
+				-- 	},
+				-- },
 				ruff = {},
 
 				zls = {},
