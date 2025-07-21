@@ -210,6 +210,16 @@ return {
 				rust_analyzer = {},
 
 				-- Python
+				basedpyright = {
+					settings = {
+						python = {
+							analysis = {
+								-- useLibraryCodeForTypes = true,
+								-- autoSearchPaths = true,
+							},
+						},
+					},
+				},
 				pylsp = {
 					settings = {
 						pylsp = {

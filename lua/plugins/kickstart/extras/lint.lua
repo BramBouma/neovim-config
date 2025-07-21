@@ -9,7 +9,8 @@ return {
 				markdown = { "markdownlint" },
 				-- python = { 'mypy', 'ruff' }
 				-- python = { 'ruff', 'mypy' },
-				python = { "mypy" },
+				-- python = { "mypy" },
+				python = { "ruff" },
 			}
 
 			-- To allow other plugins to add linters to require('lint').linters_by_ft,
