@@ -1,3 +1,9 @@
+toggle = false
+
+if not toggle then
+	return {}
+end
+
 return {
 	"nvim-lualine/lualine.nvim",
 	enabled = false,
