@@ -8,7 +8,7 @@ return {
 		priority = 1000,
 		config = function()
 			local theme = require("theme.tokyonight")
-			local transparent = false
+			local transparent = true
 
 			require("tokyonight").setup({
 				style = "night",
