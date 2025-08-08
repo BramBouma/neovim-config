@@ -12,6 +12,7 @@ return {
 				"javascript",
 				"json",
 			},
+			names = false,
 		},
 	},
 	{

@@ -80,7 +80,7 @@ return {
 							local source_map = {
 								nvim_lsp = "LSP",
 								luasnip = "Snippet",
-								buffer = "Buffer",
+								-- buffer = "Buffer",
 								path = "Path",
 								cmdline = "CMD",
 								codecompanion = "Companion",
@@ -167,7 +167,7 @@ return {
 					{ name = "supermaven" },
 					{ name = "luasnip" },
 					{ name = "lazydev", group_index = 0 },
-					{ name = "buffer", keyword_length = 3 },
+					-- { name = "buffer", keyword_length = 3 },
 					{ name = "path" },
 				},
 

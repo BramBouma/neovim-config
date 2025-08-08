@@ -7,10 +7,8 @@ local ok, cfg = pcall(function()
 	return vim.fn.json_decode(fn.readfile(file))
 end)
 
--- local variant = (ok and cfg and cfg.scheme) or "main"
-local variant = "grey"
-
--- local variant = "main"
+local variant = (ok and cfg and cfg.scheme) or "main"
+-- local variant = "grey"
 
 -- pallette
 local true_blue = "#193296"
@@ -46,17 +44,20 @@ local bg_visual = "#264f78"
 local fg = "#e6edf3"
 
 if variant == "alt" then
-	BG = bg_alt
-	BG_DARK = bg_alt_dark
-	BG_DARK1 = bg_alt_dark1
+	-- BG = bg_alt
+	-- BG_DARK = bg_alt_dark
+	-- BG_DARK1 = bg_alt_dark1
+	BG = bg_grey
+	BG_DARK = bg_grey_dark
+	BG_DARK1 = bg_grey_dark1
 elseif variant == "main" then
 	BG = bg_main
 	BG_DARK = bg_main_dark
 	BG_DARK1 = bg_main_dark1
-elseif variant == "grey" then
-	BG = bg_grey
-	BG_DARK = bg_grey_dark
-	BG_DARK1 = bg_grey_dark1
+	-- elseif variant == "grey" then
+	-- BG = bg_grey
+	-- BG_DARK = bg_grey_dark
+	-- BG_DARK1 = bg_grey_dark1
 else
 	print("No valid colorscheme provided, check color_config.json")
 	error("no valid colorscheme provided")
