@@ -25,10 +25,14 @@ SECTION: KEYMAPS FROM KICKSTART
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 --  Use CTRL+<hjkl> to switch between windows
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<M-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<M-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<M-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<M-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+-- vim.keymap.set("n", "<M-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "˙", "<C-w><C-h>", { desc = "Move focus to the left window" })
+-- vim.keymap.set("n", "<M-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "¬", "<C-w><C-l>", { desc = "Move focus to the right window" })
+-- vim.keymap.set("n", "<M-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "∆", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+-- vim.keymap.set("n", "<M-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "˚", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 --  Use CTRL+<hjkl> to switch between windows
 vim.keymap.set("n", "<C-M-h>", "<C-w><", { desc = "Decrease window width" })
 vim.keymap.set("n", "<C-M-l>", "<C-w>>", { desc = "Increase window width" })
@@ -117,7 +121,7 @@ SECTION: KEYMAPS FROM THE PRIMEAGEN (https://www.youtube.com/watch?v=w7i4amO_zaE
 
 -- move selection up or down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- appends line below to current line while keeping cursor in place
 vim.keymap.set("n", "J", "mzJ`z")
 -- page up and down while keeping cursor in the same place

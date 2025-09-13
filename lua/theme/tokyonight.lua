@@ -121,6 +121,14 @@ M.on_highlights = function(H, c)
 	H.MiniStatuslineFileinfo = { bg = dark_grey, fg = fg }
 	H.MiniStatuslineFilename = { bg = util.blend(dark_grey, 0.4, BG), fg = fg }
 
+	--SECTION: ufo / folded visuals
+	local folded_bg = util.blend(c.fg_dark, 0.18, c.bg) -- tweak 0.18 to taste
+	H.Folded = { bg = folded_bg, fg = c.fg_dark }
+	H.UfoFoldedBg = { bg = folded_bg } -- overrides default link to Folded.bg
+	H.UfoFoldedFg = { fg = c.fg } -- keep text legible
+	H.UfoFoldedEllipsis = { fg = c.fg_dark } -- used if you *don’t* set a custom handler
+	H.UfoCursorFoldedLine = { bg = util.adjust_lightness(folded_bg, 0.06) }
+
 	--SECTION: plugin ui
 
 	-- alpha
