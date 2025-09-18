@@ -26,7 +26,8 @@ local forest = "#064023"
 local blue1 = "#89aebc"
 local orange = "#d29922"
 
-local bg_main = "#0d1117"
+-- local bg_main = "#0d1117"
+local bg_main = "#23272E"
 local bg_alt = "#1d2232"
 local bg_grey = "#282c36"
 

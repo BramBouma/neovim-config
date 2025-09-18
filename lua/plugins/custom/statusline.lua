@@ -19,6 +19,7 @@ return {
 				a = { fg = colors.white, bg = colors.lightest },
 				b = { fg = colors.white, bg = colors.light },
 				c = { fg = colors.white, bg = "#0d1117" },
+				c = { fg = colors.white, bg = "#23272E" },
 				-- c = { fg = colors.white, bg = "none" },
 				z = { fg = colors.white, bg = colors.lightest },
 			},

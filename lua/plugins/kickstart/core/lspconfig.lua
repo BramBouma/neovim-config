@@ -41,6 +41,13 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
+			require("fidget").setup({
+				notification = {
+					window = {
+						winblend = 0,
+					},
+				},
+			})
 			-- Brief aside: **What is LSP?**
 			--
 			-- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -206,14 +213,15 @@ return {
 			local servers = {
 				clangd = {},
 				gopls = {},
-				-- pyright = {},
 				rust_analyzer = {},
 
 				-- Python
 				basedpyright = {
 					settings = {
-						python = {
+						basedpyright = {
 							analysis = {
+								typeCheckingMode = "off",
+								diagnosticMode = "workspace",
 								-- useLibraryCodeForTypes = true,
 								-- autoSearchPaths = true,
 							},
