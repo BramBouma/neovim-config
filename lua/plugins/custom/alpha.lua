@@ -10,7 +10,7 @@ return {
 			-- PARAMETER BLOCK
 			-- ══════════════════════════════════════════════
 
-			local PADDING_TOP = 3
+			local PADDING_TOP = 6
 			local PADDING_BTWN = 2
 
 			local BUTTONS = {
@@ -36,6 +36,8 @@ return {
 ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
             ]]
+
+			local header = [[ 🥷 ]]
 			dashboard.section.header.val = vim.split(header, "\n")
 			dashboard.section.header.opts.hl = "AlphaHeader"
 
